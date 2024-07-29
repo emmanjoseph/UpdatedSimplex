@@ -91,3 +91,51 @@ export const NAV_LINKS = [
       title: "Moby-Dick",
     },
   ];
+  export const internetServices = [
+    {
+      heading: 'Customized Package',
+      speed: 'Download Speed: 3 Mbps',
+      uploadSpeed: 'Upload Speed: 1 Mbps',
+      price: 'KES 2,500/month',
+      dataLimit: 'Unlimited Data',
+      type: 'Basic Internet',
+      customerSupport: 'Email and Phone Support',
+      additionalFeatures: 'Free Router Installation',
+      limitations: 'Best for light browsing and emails'
+    },
+    {
+      heading: 'Bronze Package',
+      speed: 'Download Speed: 5 Mbps',
+      uploadSpeed: 'Upload Speed: 3 Mbps',
+      price: 'KES 3,000/month',
+      dataLimit: 'Unlimited Data',
+      type: 'Standard Internet',
+      customerSupport: '24/7 Phone Support',
+      additionalFeatures: 'Free Router Installation',
+      limitations: 'Ideal for streaming in SD and light online gaming'
+    },
+    {
+      heading: 'Silver Package',
+      speed: 'Download Speed: 10 Mbps',
+      uploadSpeed: 'Upload Speed: 10 Mbps',
+      price: 'KES 5,000/month',
+      dataLimit: 'Unlimited Data',
+      type: 'Premium Internet',
+      customerSupport: '24/7 Phone Support',
+      additionalFeatures: 'Free Router Installation',
+      limitations: 'Perfect for HD streaming and moderate online gaming'
+    },
+    {
+      heading: 'Gold Package',
+      speed: 'Download Speed: 16 Mbps',
+      uploadSpeed: 'Upload Speed: 20 Mbps',
+      price: 'KES 10,000/month',
+      dataLimit: 'Unlimited Data',
+      type: 'Ultra-Premium Internet',
+      customerSupport: '24/7 Phone Support',
+      additionalFeatures: 'Free Router Installation',
+      limitations: 'Excellent for 4K streaming, heavy online gaming, and smart home devices'
+    }
+  ];
+  
+  

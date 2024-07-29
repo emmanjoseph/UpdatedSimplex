@@ -3,11 +3,15 @@ import React from 'react';
 interface ButtonProps {
   text: string;
   icon?: React.ReactNode; // optional icon property of type ReactNode
+  className?:string
+  onClick?:React.MouseEventHandler<HTMLButtonElement>
 }
 
-const TailwindButton: React.FC<ButtonProps> = ({ text, icon }) => {
+const TailwindButton: React.FC<ButtonProps> = ({ text, icon,className,onClick }) => {
   return (
-    <button className="px-6 py-3 rounded-full border border-black bg-white text-black text-sm hover:shadow-[4px_4px_0px_0px_rgba(0,0,0)] transition duration-200 flex items-center gap-2">
+    <button 
+    onClick={onClick}
+    className={`rounded-full border border-black bg-white text-black hover:shadow-[4px_4px_0px_0px_rgba(0,0,0)] transition duration-200 flex items-center gap-2 ${className}`}>
       {icon}
       {text}
     </button>
