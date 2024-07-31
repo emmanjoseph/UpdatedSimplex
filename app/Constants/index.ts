@@ -127,7 +127,7 @@ export const NAV_LINKS = [
     },
     {
       heading: 'Gold Package',
-      speed: 'Download Speed: 16 Mbps',
+      speed: 'Download Speed: 20 Mbps',
       uploadSpeed: 'Upload Speed: 20 Mbps',
       price: 'KES 10,000/month',
       dataLimit: 'Unlimited Data',

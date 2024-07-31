@@ -1,7 +1,10 @@
 import { cn } from "@/lib/utils";
 import React from "react";
 import { BentoGrid, BentoGridItem } from "../components/ui/BentoGrid";
-
+import { IoWifi } from "react-icons/io5";
+import { MdElectricBolt } from "react-icons/md";
+import { FaSatelliteDish } from "react-icons/fa";
+import { BiCctv } from "react-icons/bi";
 
 export function Grid() {
   return (
@@ -16,7 +19,7 @@ export function Grid() {
           description={item.description}
           header={item.header}
           className={item.className}
-        //   icon={item.icon}
+          icon={item.icon}
         />
       ))}
     </BentoGrid>
@@ -29,32 +32,32 @@ const Skeleton = () => (
 );
 const items = [
   {
-    title: "The Dawn of Innovation",
+    title: "Internet Provision",
     description: "Explore the birth of groundbreaking ideas and inventions.",
     header: <Skeleton />,
     className: "md:col-span-2",
-    // icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
+    icon: <IoWifi className="h-4 w-4 text-neutral-500" />,
   },
   {
-    title: "The Digital Revolution",
+    title: "Telecoms",
     description: "Dive into the transformative power of technology.",
     header: <Skeleton />,
     className: "md:col-span-1",
-    // icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
+    icon: <FaSatelliteDish className="h-4 w-4 text-neutral-500" />,
   },
   {
     title: "The Art of Design",
     description: "Discover the beauty of thoughtful and functional design.",
     header: <Skeleton />,
     className: "md:col-span-1",
-    // icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
+    icon: <BiCctv className="h-4 w-4 text-neutral-500" />,
   },
   {
-    title: "The Power of Communication",
+    title: "Electrical",
     description:
       "Understand the impact of effective communication in our lives.",
     header: <Skeleton />,
     className: "md:col-span-2",
-    // icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
+    icon: <MdElectricBolt className="h-4 w-4 text-neutral-500" />,
   },
 ];

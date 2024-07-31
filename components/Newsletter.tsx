@@ -29,6 +29,7 @@ export function Newsletter() {
           </p>          
           <TailwindButton
           text="sign up"
+          className="px-7 py-3 rounded-full"
           />
         </div>
       </BackgroundGradient>
