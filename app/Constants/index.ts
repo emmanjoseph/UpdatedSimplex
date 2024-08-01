@@ -1,3 +1,12 @@
+
+import CCTV from '@/public/cctv-camera.png'
+import LowVoltageCable from '@/public/cable.png'
+import AlarmSysytem from '@/public/alarm.png'
+import TwoWayGate from '@/public/gate.png'
+import DoorBells from '@/public/doorbell.png'
+import Motion from '@/public/motion-detector.png'
+import Fence from '@/public/electric-fence.png'
+
 export const NAV_LINKS = [
     { href: '/', key: 'home', label: 'Home' },
     { href: '/', key: 'services', label: 'Services' },
@@ -137,5 +146,92 @@ export const NAV_LINKS = [
       limitations: 'Excellent for 4K streaming, heavy online gaming, and smart home devices'
     }
   ];
+
+  export const securityServices =[
+    {
+      img:LowVoltageCable,
+      name: "Installation of Low Voltage Cables",
+      description: "Enhances visibility and security."
+  },
+  {
+      name: "Installation of Security Cameras",
+      description: "Helps in monitoring and recording events for future clarification.",
+      img:CCTV,
+
+
+  },
+  {
+      name: "Installation of Alarm Systems",
+      description: "Provides alert mechanisms to enhance safety and security.",
+      img:AlarmSysytem,
+
+  },
+  {
+      name: "Installation of Two-Way Gate Communication Systems",
+      description: "Facilitates secure communication for gated entries.",
+      img:TwoWayGate,
+
+  },
+  {
+      name: "Installation of Doorbells",
+      description: "Integrates with communication systems for secure access.",
+      img:DoorBells,
+
+  },
+  {
+      name: "Installation of Motion Detectors",
+      description: "Detects movement to prevent unauthorized access.",
+      img:Motion,
+
+  },
+  {
+      name: "Installation of Electrical Fences",
+      description: "Provides a robust perimeter security solution.",
+      img:Fence,
+
+  }
+  ]
   
-  
+  export const electricalServices = [
+    
+      {
+          name: "High Voltage Cabling Solutions",
+          description: "Providing high voltage cabling solutions for various needs.",
+          // img: highVoltageCablingImg
+      },
+      {
+          name: "Basic Home Wiring",
+          description: "Wiring solutions for residential properties.",
+          // img: homeWiringImg
+      },
+      {
+          name: "Commercial Building Wiring",
+          description: "Comprehensive wiring solutions for commercial buildings.",
+          // img: commercialWiringImg
+      },
+      {
+          name: "Customized Electrical Projects",
+          description: "Tailored electrical solutions for specific requirements.",
+          // img: customizedProjectsImg
+      },
+      {
+          name: "Electrical Projects for Learning Institutions",
+          description: "Specialized electrical projects for schools and universities.",
+          // img: learningInstitutionsImg
+      },
+      {
+          name: "Electrical Projects for Corporate Research",
+          description: "Electrical solutions for corporate research facilities.",
+          // img: corporateResearchImg
+      },
+      {
+          name: "Power Backup Systems",
+          description: "Reliable power backup solutions.",
+          // img: powerBackupImg
+      },
+      {
+          name: "Solar Power Installations",
+          description: "Sustainable and efficient solar power solutions.",
+          // img: solarPowerImg
+      }
+  ]
