@@ -29,18 +29,23 @@ const Electrical = () => {
       <div className='my-10 lg:my-20 grid lg:grid-cols-4 gap-10'>
         {electricalServices.map((item)=>{
           return (
-            <div key={item.name}
-            className='bg-white shadow-lg dark:bg-slate-400/15 rounded-xl p-6'
-            >
-              <div className='my-12'>
-                icon
-              </div>
-              <div>
-                <h1 className='bold-16 py-2'>{item.name}</h1>
-                <p className='regular-14'>{item.description}</p>
-              </div>
-
+            <div 
+            key={item.name}
+            className='bg-white shadow-lg dark:bg-slate-400/15 rounded-xl p-6 transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl'
+          >
+            <div className='my-12'>
+              <Image
+                src={item.img}
+                alt={item.name}
+                className='w-[40px] h-[40px] object-cover rounded-lg'
+              />
             </div>
+            <div>
+              <h1 className='bold-16 py-2'>{item.name}</h1>
+              <p className='regular-14'>{item.description}</p>
+            </div>
+          </div>
+          
           )
         })}
       </div>

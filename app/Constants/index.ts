@@ -1,4 +1,4 @@
-
+import UserImg from '@/public/user.jpg';
 import CCTV from '@/public/cctv-camera.png'
 import LowVoltageCable from '@/public/cable.png'
 import AlarmSysytem from '@/public/alarm.png'
@@ -6,6 +6,14 @@ import TwoWayGate from '@/public/gate.png'
 import DoorBells from '@/public/doorbell.png'
 import Motion from '@/public/motion-detector.png'
 import Fence from '@/public/electric-fence.png'
+import highVoltageCablingImg from '@/public/wires.png'
+import homeWiringImg from '@/public/home.png'
+import commercialWiringImg from '@/public/home.png'
+import customizedProjectsImg from '@/public/clipboard.png'
+import learningInstitutionsImg from '@/public/home.png'
+import corporateResearchImg from '@/public/home.png'
+import powerBackupImg from '@/public/electric-generator.png'
+import solarPowerImg from '@/public/solar-cell.png'
 
 export const NAV_LINKS = [
     { href: '/', key: 'home', label: 'Home' },
@@ -197,41 +205,75 @@ export const NAV_LINKS = [
       {
           name: "High Voltage Cabling Solutions",
           description: "Providing high voltage cabling solutions for various needs.",
-          // img: highVoltageCablingImg
+          img: highVoltageCablingImg
       },
       {
           name: "Basic Home Wiring",
           description: "Wiring solutions for residential properties.",
-          // img: homeWiringImg
+          img: homeWiringImg
       },
       {
           name: "Commercial Building Wiring",
           description: "Comprehensive wiring solutions for commercial buildings.",
-          // img: commercialWiringImg
+          img: commercialWiringImg
       },
       {
           name: "Customized Electrical Projects",
           description: "Tailored electrical solutions for specific requirements.",
-          // img: customizedProjectsImg
+          img: customizedProjectsImg
       },
       {
           name: "Electrical Projects for Learning Institutions",
           description: "Specialized electrical projects for schools and universities.",
-          // img: learningInstitutionsImg
+          img: learningInstitutionsImg
       },
       {
           name: "Electrical Projects for Corporate Research",
           description: "Electrical solutions for corporate research facilities.",
-          // img: corporateResearchImg
+          img: corporateResearchImg
       },
       {
           name: "Power Backup Systems",
           description: "Reliable power backup solutions.",
-          // img: powerBackupImg
+          img: powerBackupImg
       },
       {
           name: "Solar Power Installations",
           description: "Sustainable and efficient solar power solutions.",
-          // img: solarPowerImg
+          img: solarPowerImg
       }
   ]
+
+
+  export const people = [
+    {
+      id: 1,
+      name: "Moses Muia",
+      designation: "Manager",
+      image: UserImg.src,
+    },
+    {
+      id: 2,
+      name: "Moses Waithaka",
+      designation: "Technical Support",
+      image: UserImg.src,
+    },
+    {
+      id: 3,
+      name: "Jane Smith",
+      designation: "Data Scientist",
+      image: UserImg.src,
+    },
+    {
+      id: 4,
+      name: "Lawrence Kinyua",
+      designation: "Technical Support",
+      image: UserImg.src,
+    },
+    {
+      id: 5,
+      name: "Mary Wanjiru",
+      designation: "Technical Support",
+      image: UserImg.src,
+    },
+  ];
