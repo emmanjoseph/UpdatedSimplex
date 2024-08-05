@@ -26,7 +26,7 @@ const Medium = () => {
                         <TailwindButton
                             key={category.id}
                             text={category.title}
-                            className={`text-sm px-3 py-2 ${selectedItem === category.id ? 'bg-indigo-500 text-white border-none' : 'bg-none text-black'}`}
+                            className={`text-sm px-3 py-2 ${selectedItem === category.id ? 'bg-blue-500 text-white border-none' : 'bg-none text-black'}`}
                             onClick={() => setSelectedItem(category.id)}
                         />
                     ))}

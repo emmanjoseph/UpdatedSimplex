@@ -17,7 +17,7 @@ import solarPowerImg from '@/public/solar-cell.png'
 
 export const NAV_LINKS = [
     { href: '/', key: 'home', label: 'Home' },
-    { href: '/', key: 'services', label: 'Services' },
+    { href: '/services', key: 'services', label: 'Services' },
     { href: '/', key: 'about', label: 'About' },
     { href: '/', key: 'contact_us', label: 'Contact Us' },
   ];

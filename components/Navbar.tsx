@@ -6,6 +6,7 @@ import { IoMdMenu } from 'react-icons/io';
 import { AiOutlineClose } from 'react-icons/ai';
 import { motion } from 'framer-motion';
 import { ThemeToggleButton } from './ThemeToggleButton';
+import Link from 'next/link';
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -21,9 +22,9 @@ const Navbar = () => {
         <ul className='hidden md:flex gap-7'>
           {NAV_LINKS.map((link) => (
             <li key={link.key} className='regular-14'>
-              <a href='' className=' hover:text-indigo-500 transition-all duration-200'>
+              <Link href={link.href} className=' hover:text-indigo-500 transition-all duration-200'>
                 {link.label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
@@ -61,9 +62,9 @@ const Navbar = () => {
           <ul className='flex flex-col gap-7'>
             {NAV_LINKS.map((link) => (
               <li key={link.key} className='regular-16'>
-                <a href='' className=''>
-                  {link.label}
-                </a>
+                 <Link href={link.href} className=' hover:text-indigo-500 transition-all duration-200'>
+                {link.label}
+              </Link>
               </li>
             ))}
           </ul>
