@@ -1,21 +1,23 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useState, Suspense } from 'react'
 import dynamic from 'next/dynamic'
 import { motion, AnimatePresence } from 'framer-motion'
 import TailwindButton from '../ui/TailwindButton'
 
 // Dynamic import of components for better performance
-const Communication = dynamic(() => import('./Communication'))
-const Security = dynamic(() => import('./Security'))
-const Electrical = dynamic(() => import('./Electrical'))
+const Communication = dynamic(() => import('./Communication'), { suspense: true })
+const Security = dynamic(() => import('./Security'), { suspense: true })
+const Electrical = dynamic(() => import('./Electrical'), { suspense: true })
 
 const Medium = () => {
     const [selectedItem, setSelectedItem] = useState(1);
     const category = [
-        {id: 1, title: 'Communication'},
-        {id: 2, title: 'Security'},
-        {id: 3, title: 'Electrical'},
+        { id: 1, title: 'Communication', component: Communication },
+        { id: 2, title: 'Security', component: Security },
+        { id: 3, title: 'Electrical', component: Electrical },
     ]
+
+    const SelectedComponent = category.find(cat => cat.id === selectedItem)?.component;
 
     return (
         <div className='max-container padding-container mt-6'>
@@ -26,47 +28,26 @@ const Medium = () => {
                         <TailwindButton
                             key={category.id}
                             text={category.title}
-                            className={`text-sm px-3 py-2 ${selectedItem === category.id ? 'bg-blue-500 text-white border-none' : 'bg-none text-black'}`}
+                            className={`text-sm px-3 py-2 ${selectedItem === category.id ? 'border-none bg-indigo-500 text-white' : 'bg-none text-black'}`}
                             onClick={() => setSelectedItem(category.id)}
+                            aria-pressed={selectedItem === category.id}
                         />
                     ))}
                 </div>
             </div>
             <div className='my-6'>
                 <AnimatePresence mode='wait'>
-                    {selectedItem === 1 && (
-                        <motion.div
-                            key="communication"
-                            initial={{ opacity: 0, y: 50 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: 50 }}
-                            transition={{ duration: 0.5 }}
-                        >
-                            <Communication />
-                        </motion.div>
-                    )}
-                    {selectedItem === 2 && (
-                        <motion.div
-                            key="security"
-                            initial={{ opacity: 0, y: 50 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: 50 }}
-                            transition={{ duration: 0.5 }}
-                        >
-                            <Security />
-                        </motion.div>
-                    )}
-                    {selectedItem === 3 && (
-                        <motion.div
-                            key="electrical"
-                            initial={{ opacity: 0, y: 50 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: 50 }}
-                            transition={{ duration: 0.5 }}
-                        >
-                            <Electrical />
-                        </motion.div>
-                    )}
+                    <motion.div
+                        key={selectedItem}
+                        initial={{ opacity: 0, y: 50 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: 50 }}
+                        transition={{ duration: 0.5 }}
+                    >
+                        <Suspense fallback={<div>Loading...</div>}>
+                            {SelectedComponent && <SelectedComponent />}
+                        </Suspense>
+                    </motion.div>
                 </AnimatePresence>
             </div>
         </div>

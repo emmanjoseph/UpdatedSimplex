@@ -9,7 +9,8 @@ import { motion } from 'framer-motion';
 
 const Hero = () => {
   return (
-    <div className='w-full max-container padding-container flex items-center justify-between py-20 lg:py-36 mt-2 gap-4'>
+    <div className='w-full h-screen'>
+    <div className='w-full max-container padding-container flex items-center justify-between py-20 lg:py-36  mt-2 gap-4'>
       <div className='w-full lg:w-1/2 flex flex-col gap-2'>
         <h1 className='bold-40 md:bold-64 my-4'>Comprehensive <br /> IT Solutions </h1>
         <p className='w-full regular-14 md:regular-16 mt-6 xl:max-w-[550px] leading-snug tracking-wide'>
@@ -25,7 +26,7 @@ const Hero = () => {
               <h1 className='bold-18 md:bold-20'>Quality Services</h1>
               <p className='regular-14 text-gray-30'>Excellence in every project</p>
             </div>
-            <div className='bg-white/20 w-1'/>
+            <div className='bg-black/35 dark:bg-white/20 w-1'/>
             <div className='flex flex-col gap-2'>
               <h1 className='bold-18 md:bold-20'>Affordable Plans</h1>
               <p className='regular-14 text-gray-30'>Cost-effective solutions</p>
@@ -63,6 +64,7 @@ const Hero = () => {
             <Image src={Img3} alt='IT Solutions' className=''/>
           </motion.div>
         </div>
+      </div>
       </div>
     </div>
   );
