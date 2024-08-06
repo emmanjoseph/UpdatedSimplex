@@ -1,5 +1,6 @@
+import { FeaturedServices } from '@/components/FeaturedServices'
 import Footer from '@/components/Footer'
-import { Grid } from '@/components/Grid'
+
 import Hero from '@/components/Hero'
 import Intro from '@/components/Intro'
 // import Navbar from '@/components/Navbar'
@@ -10,10 +11,9 @@ import React from 'react'
 const page = () => {
   return (
     <div>
-      {/* <Navbar /> */}
       <Hero/>
       <Intro />
-      <Grid/>
+      <FeaturedServices/>
       <Testimonials/>
       <Newsletter/>
       <Footer/>
