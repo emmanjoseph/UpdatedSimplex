@@ -5,6 +5,7 @@ import TailwindButton from "./ui/TailwindButton";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import SignUpImg from '@/public/signUp.jpg'
+import Link from "next/link";
 
 export function Newsletter() {
   return (
@@ -26,11 +27,14 @@ export function Newsletter() {
           <h1 className='bold-20 md:bold-32 py-2'>Ready to signup and join us?</h1>
           <p className='w-full mt-2 text-left md:text-center regular-14 md:regular-16'>
             Join our newsletter to stay updated with the latest news and special sales. Let’s your email address here!
-          </p>          
+          </p>   
+          <Link href='/signup'>
           <TailwindButton
           text="sign up"
           className="px-7 py-3 rounded-full"
           />
+          </Link>       
+          
         </div>
       </BackgroundGradient>
       </motion.div>

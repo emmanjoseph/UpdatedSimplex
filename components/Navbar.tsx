@@ -31,10 +31,15 @@ const Navbar = () => {
       </div>
       <div className='hidden lg:flex gap-3'>
       <ThemeToggleButton/>
+      <Link href='/login'
+      className='hidden md:block'
+      >
       <button className=" hidden md:flexCenter gap-1 px-4 py-2  border border-black bg-white text-black text-sm hover:shadow-[4px_4px_0px_0px_rgba(0,0,0)] transition duration-200 rounded-full">
         <AiOutlineUser />
         <span className='regular-14'>login</span>
 </button>
+      </Link>
+      
       </div>
       
       
@@ -43,8 +48,8 @@ const Navbar = () => {
       </div>
 
       {/* mobile menu */}
-      <motion.div
-        initial={{ x: '200%' }}
+      {/* <motion.div
+        initial={{ x: '150%',opacity:0 }}
         animate={{ x: openMenu ? '0%' : '100%' }}
         transition={{ duration: 0.5 }}
         className={`absolute top-0 left-0 w-full h-screen bg-white dark:bg-black/90 z-10 px-3 py-6 md:hidden`}
@@ -74,7 +79,7 @@ const Navbar = () => {
             <span className='regular-14'>login</span>
           </button>
         </div>
-      </motion.div>
+      </motion.div> */}
     </div>
   );
 };
