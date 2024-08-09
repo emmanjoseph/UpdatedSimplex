@@ -10,7 +10,7 @@ export const BentoGrid = ({
   return (
     <div
       className={cn(
-        "grid md:auto-rows-[18rem] grid-cols-1 md:grid-cols-3 gap-4 max-w-full mx-auto ",
+        "grid md:auto-rows-[18rem] grid-cols-1 md:grid-cols-3 gap-4 max-w-full mx-auto",
         className
       )}
     >
@@ -25,14 +25,14 @@ export const BentoGridItem = ({
   description,
   header,
   icon,
-  
+  image,
 }: {
   className?: string;
   title?: string | React.ReactNode;
   description?: string | React.ReactNode;
   header?: React.ReactNode;
   icon?: React.ReactNode;
- 
+  image?: string;
 }) => {
   return (
     <div
@@ -42,6 +42,7 @@ export const BentoGridItem = ({
       )}
     >
       {header}
+      {image && <img src={image} alt="Bento Item" className="" />}
       <div className="group-hover/bento:translate-x-2 transition duration-200">
         {icon}
         <div className="font-sans font-bold text-neutral-600 dark:text-neutral-200 mb-2 mt-2">
