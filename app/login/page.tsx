@@ -76,7 +76,7 @@ const page = () => {
 
            <div className='flexCenter gap-3 my-1'>
             <div className='h-[1px] w-1/4 bg-black/50 dark:bg-white/20'/>
-            <p className='text-base text-gray-900 dark:text-gray-100'>Or With</p>
+            <p className='text-base regular-14 text-gray-900 dark:text-gray-100'>Or With</p>
             <div className='h-[1px] w-1/4 bg-black/50 dark:bg-white/20'/>
           </div>
           <TailwindButton
