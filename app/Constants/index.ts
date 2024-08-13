@@ -155,94 +155,175 @@ export const NAV_LINKS = [
     }
   ];
 
-  export const securityServices =[
+  export const securityServices = [
     {
-      img:LowVoltageCable,
       name: "Installation of Low Voltage Cables",
-      description: "Enhances visibility and security."
-  },
-  {
+      description: "Enhances visibility and security.",
+      img: LowVoltageCable,
+      moreInfo: 'We provide installation of low voltage cables to enhance visibility and security in various settings including industrial, commercial, and residential areas. Our services ensure safety and efficiency through proper installation, maintenance, and repair.',
+      highlights: [
+        "Industrial, commercial, and residential solutions",
+        "Ensuring safety and efficiency",
+        "Installation, maintenance, and repair"
+      ]
+    },
+    {
       name: "Installation of Security Cameras",
       description: "Helps in monitoring and recording events for future clarification.",
-      img:CCTV,
-
-
-  },
-  {
+      img: CCTV,
+      moreInfo: 'Our security camera installation services help in monitoring and recording events for future clarification. We offer solutions for industrial, commercial, and residential needs, ensuring safety and efficiency.',
+      highlights: [
+        "Industrial, commercial, and residential solutions",
+        "Ensuring safety and efficiency",
+        "Installation, maintenance, and repair"
+      ]
+    },
+    {
       name: "Installation of Alarm Systems",
       description: "Provides alert mechanisms to enhance safety and security.",
-      img:AlarmSysytem,
-
-  },
-  {
+      img: AlarmSysytem,
+      moreInfo: 'We install alarm systems that provide alert mechanisms to enhance safety and security in various environments. Our services cover industrial, commercial, and residential areas, ensuring safety and efficiency.',
+      highlights: [
+        "Industrial, commercial, and residential solutions",
+        "Ensuring safety and efficiency",
+        "Installation, maintenance, and repair"
+      ]
+    },
+    {
       name: "Installation of Two-Way Gate Communication Systems",
       description: "Facilitates secure communication for gated entries.",
-      img:TwoWayGate,
-
-  },
-  {
+      img: TwoWayGate,
+      moreInfo: 'Our two-way gate communication systems facilitate secure communication for gated entries, enhancing security for industrial, commercial, and residential properties. We ensure safety and efficiency through proper installation and maintenance.',
+      highlights: [
+        "Industrial, commercial, and residential solutions",
+        "Ensuring safety and efficiency",
+        "Installation, maintenance, and repair"
+      ]
+    },
+    {
       name: "Installation of Doorbells",
       description: "Integrates with communication systems for secure access.",
-      img:DoorBells,
-
-  },
-  {
+      img: DoorBells,
+      moreInfo: 'We provide installation of doorbells that integrate with communication systems for secure access. Our services cater to industrial, commercial, and residential needs, ensuring safety and efficiency.',
+      highlights: [
+        "Industrial, commercial, and residential solutions",
+        "Ensuring safety and efficiency",
+        "Installation, maintenance, and repair"
+      ]
+    },
+    {
       name: "Installation of Motion Detectors",
       description: "Detects movement to prevent unauthorized access.",
-      img:Motion,
-
-  },
-  {
+      img: Motion,
+      moreInfo: 'Our motion detectors detect movement to prevent unauthorized access, providing enhanced security for industrial, commercial, and residential areas. We ensure safety and efficiency through proper installation, maintenance, and repair.',
+      highlights: [
+        "Industrial, commercial, and residential solutions",
+        "Ensuring safety and efficiency",
+        "Installation, maintenance, and repair"
+      ]
+    },
+    {
       name: "Installation of Electrical Fences",
       description: "Provides a robust perimeter security solution.",
-      img:Fence,
-
-  }
-  ]
-  
+      img: Fence,
+      moreInfo: 'We install electrical fences that provide a robust perimeter security solution for various settings including industrial, commercial, and residential properties. Our services ensure safety and efficiency through proper installation, maintenance, and repair.',
+      highlights: [
+        "Industrial, commercial, and residential solutions",
+        "Ensuring safety and efficiency",
+        "Installation, maintenance, and repair"
+      ]
+    }
+  ];
   export const electricalServices = [
-    
-      {
-          name: "High Voltage Cabling Solutions",
-          description: "Providing high voltage cabling solutions for various needs.",
-          img: highVoltageCablingImg
-      },
-      {
-          name: "Basic Home Wiring",
-          description: "Wiring solutions for residential properties.",
-          img: homeWiringImg
-      },
-      {
-          name: "Commercial Building Wiring",
-          description: "Comprehensive wiring solutions for commercial buildings.",
-          img: commercialWiringImg
-      },
-      {
-          name: "Customized Electrical Projects",
-          description: "Tailored electrical solutions for specific requirements.",
-          img: customizedProjectsImg
-      },
-      {
-          name: "Electrical Projects for Learning Institutions",
-          description: "Specialized electrical projects for schools and universities.",
-          img: learningInstitutionsImg
-      },
-      {
-          name: "Electrical Projects for Corporate Research",
-          description: "Electrical solutions for corporate research facilities.",
-          img: corporateResearchImg
-      },
-      {
-          name: "Power Backup Systems",
-          description: "Reliable power backup solutions.",
-          img: powerBackupImg
-      },
-      {
-          name: "Solar Power Installations",
-          description: "Sustainable and efficient solar power solutions.",
-          img: solarPowerImg
-      }
-  ]
+    {
+      name: "High Voltage Cabling Solutions",
+      description: "Providing high voltage cabling solutions for various needs.",
+      img: highVoltageCablingImg,
+      moreInfo: "We offer high voltage cabling solutions for industrial, commercial, and residential projects, ensuring safety and efficiency. Our services include installation, maintenance, and repair of high voltage systems.",
+      highlights: [
+        "Industrial, commercial, and residential solutions",
+        "Ensuring safety and efficiency",
+        "Installation, maintenance, and repair"
+      ]
+    },
+    {
+      name: "Basic Home Wiring",
+      description: "Wiring solutions for residential properties.",
+      img: homeWiringImg,
+      moreInfo: "Our home wiring services cover new installations, upgrades, and repairs. We use high-quality materials and follow the latest safety standards to ensure reliable and long-lasting electrical systems in your home.",
+      highlights: [
+        "New installations, upgrades, and repairs",
+        "High-quality materials",
+        "Latest safety standards"
+      ]
+    },
+    {
+      name: "Commercial Building Wiring",
+      description: "Comprehensive wiring solutions for commercial buildings.",
+      img: commercialWiringImg,
+      moreInfo: "We provide comprehensive wiring solutions for commercial buildings, including offices, retail spaces, and warehouses. Our team ensures minimal disruption to your operations during installation and maintenance.",
+      highlights: [
+        "Offices, retail spaces, and warehouses",
+        "Minimal disruption to operations",
+        "Installation and maintenance"
+      ]
+    },
+    {
+      name: "Customized Electrical Projects",
+      description: "Tailored electrical solutions for specific requirements.",
+      img: customizedProjectsImg,
+      moreInfo: "Our customized electrical projects cater to unique requirements, including specialized equipment installations, energy-efficient solutions, and smart home integrations. We work closely with clients to deliver tailored solutions.",
+      highlights: [
+        "Specialized equipment installations",
+        "Energy-efficient solutions",
+        "Smart home integrations"
+      ]
+    },
+    {
+      name: "Electrical Projects for Learning Institutions",
+      description: "Specialized electrical projects for schools and universities.",
+      img: learningInstitutionsImg,
+      moreInfo: "We specialize in electrical projects for learning institutions, providing safe and efficient electrical systems for classrooms, laboratories, and administrative buildings. Our services include installation, maintenance, and upgrades.",
+      highlights: [
+        "Classrooms, laboratories, and administrative buildings",
+        "Safe and efficient electrical systems",
+        "Installation, maintenance, and upgrades"
+      ]
+    },
+    {
+      name: "Electrical Projects for Corporate Research",
+      description: "Electrical solutions for corporate research facilities.",
+      img: corporateResearchImg,
+      moreInfo: "Our electrical solutions for corporate research facilities include specialized power systems, data center wiring, and laboratory electrical installations. We ensure the highest standards of safety and reliability.",
+      highlights: [
+        "Specialized power systems",
+        "Data center wiring",
+        "Laboratory electrical installations"
+      ]
+    },
+    {
+      name: "Power Backup Systems",
+      description: "Reliable power backup solutions.",
+      img: powerBackupImg,
+      moreInfo: "We provide reliable power backup solutions to ensure uninterrupted power supply during outages. Our services include the installation of generators, UPS systems, and battery backups for homes and businesses.",
+      highlights: [
+        "Generators, UPS systems, and battery backups",
+        "Uninterrupted power supply",
+        "Homes and businesses"
+      ]
+    },
+    {
+      name: "Solar Power Installations",
+      description: "Sustainable and efficient solar power solutions.",
+      img: solarPowerImg,
+      moreInfo: "Our solar power installation services offer sustainable and cost-effective energy solutions for residential and commercial properties. We handle everything from system design to installation and maintenance.",
+      highlights: [
+        "System design to installation and maintenance",
+        "Sustainable and cost-effective energy solutions",
+        "Residential and commercial properties"
+      ]
+    }
+  ];
 
 
   export const people = [

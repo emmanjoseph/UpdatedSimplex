@@ -1,14 +1,18 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Image, { StaticImageData } from 'next/image';
-import CCTV from '@/public/electrical.jpg';
 import { electricalServices } from '@/app/Constants';
-import { FaArrowRight } from 'react-icons/fa';
+import { FaArrowRight,FaCheck } from 'react-icons/fa';
+import { IoMdClose } from "react-icons/io";
+import Electric from '@/public/electrical.jpg'
+
 
 interface ElectricalService {
   name: string;
   description: string;
   img: StaticImageData;
+  moreInfo: string;
+  highlights: string[];
 }
 
 interface ModalProps {
@@ -21,11 +25,31 @@ const Modal = ({ isOpen, onClose, content }: ModalProps) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-      <div className="bg-white dark:bg-slate-900 p-6 rounded-lg max-w-[1140px] w-full h-screen">
-        <button onClick={onClose} className="text-red-500 float-right">Close</button>
-        <h2 className="bold-20 md:bold-32 py-2">{content.name}</h2>
-        <p className="regular-14 md:regular-16">{content.description}</p>
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 duration-500 px-4">
+      <div className="bg-white dark:bg-[#1a1a1a] p-6 lg:p-7 rounded-xl max-w-screen-md w-full relative flex flex-col gap-3">
+      <h2 className="mt-5 bold-18 lg:bold-20 py-2">{content.name}</h2>
+        <div className="shadow-xl rounded-xl min-h-[15em]">
+          <Image src={Electric} alt='image' className='h-[15rem] object-cover rounded-xl'/>
+        </div>
+        <div>
+        <p className="regular-14 md:text-[15px] font-[400] mt-2">{content.moreInfo}</p>
+        </div>
+        <div className="">
+          <h3 className="bold-18 lg:bold-20">Service Highlights</h3>
+          <ul className="">
+           {content.highlights.map((highlight,id)=>{
+            return <li key={id} className='flex gap-2 items-center'>
+              <FaCheck size={10}/><span className="bold-14 regular-14 md:text-[15px] font-[400]">{highlight} </span>
+            </li>
+           })}
+          </ul>
+        </div>
+        
+          <button onClick={onClose}
+          className=" absolute top-4 right-4 p-1 rounded-full hover:bg-black/25 dark:hover:bg-white/15 duration-500 transition-all">
+          <IoMdClose size={20}/>
+        </button>
+        
       </div>
     </div>
   );
@@ -61,7 +85,7 @@ const Electrical = () => {
 
         <div className="hidden lg:block lg:w-1/2 p-2">
           <Image
-            src={CCTV}
+            src={Electric}
             alt="internet"
             className="w-full h-[250px] object-cover rounded-xl shadow-xl"
           />
