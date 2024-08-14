@@ -110,11 +110,11 @@ const Electrical = () => {
               <p className="regular-14">{item.description}</p>
             </div>
             <button
-              className="w-full lg:w-1/2 my-4 flex items-center gap-1 hover:gap-5 text-indigo-500 duration-150 transition-all"
+              className="w-full lg:w-1/2 my-4 flex items-center gap-1 hover:gap-5  duration-150 transition-all"
               onClick={() => handleLearnMoreClick(item)}
             >
-              <span className="regular-14">Learn more</span>
-              <FaArrowRight size={18} />
+              <span className="regular-14 bg-gradient-to-r from-sky-400 via-red-600 to-indigo-500 bg-clip-text text-transparent">Learn more</span>
+              <FaArrowRight size={15} />
             </button>
           </div>
         ))}

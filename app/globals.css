@@ -133,8 +133,8 @@
     @apply text-[88px] font-[700] leading-[120%];
   }
 
-  .bold-64 {
-    @apply text-[64px] font-[700] leading-[120%];
+  .bold-66 {
+    @apply text-[66px] font-[800] leading-[120%];
   }
 
   .bold-52 {
@@ -142,7 +142,7 @@
   }
 
   .bold-40 {
-    @apply text-[40px] font-[700] leading-[120%];
+    @apply text-[40px] font-[500] leading-[120%];
   }
 
   .bold-32 {

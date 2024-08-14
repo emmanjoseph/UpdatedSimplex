@@ -28,7 +28,7 @@ const Medium = () => {
                         <TailwindButton
                             key={category.id}
                             text={category.title}
-                            className={`text-sm px-3 py-2 ${selectedItem === category.id ? 'border-none bg-indigo-500 text-white' : 'bg-none text-black'}`}
+                            className={`text-sm px-3 py-2 ${selectedItem === category.id ? 'bg-red-500 text-white border-none' : 'bg-none text-black'}`}
                             onClick={() => setSelectedItem(category.id)}
                             aria-pressed={selectedItem === category.id}
                         />

@@ -26,11 +26,11 @@ const Bottom = () => {
           ))}
         </div>
         <div className='flex flex-col lg:items-end gap-7 mt-5 lg:mt-0'>
-        <div className='flex flex-row items-center justify-start mt-5'>
+        {/* <div className='flex flex-row items-center justify-start mt-5'>
           <AnimatedTooltip
           items={people}
           />
-        </div>
+        </div> */}
 
         <div className='flex lg:flex-row flex-col gap-2'>
           <a href=""><TailwindButton
