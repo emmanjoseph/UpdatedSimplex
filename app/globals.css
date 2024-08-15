@@ -142,7 +142,7 @@
   }
 
   .bold-40 {
-    @apply text-[40px] font-[500] leading-[120%];
+    @apply text-[40px] font-[700] leading-[120%];
   }
 
   .bold-32 {

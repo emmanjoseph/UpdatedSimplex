@@ -5,7 +5,7 @@ import { ThemeToggleButton } from './ThemeToggleButton'
 
 const Navbar = () => {
   return (
-    <div className='w-full absolute top-0 left-0 z-10'>
+    <div className='w-full absolute top-0 left-0  z-10'>
         <div className='max-container padding-container py-7 flexBetween'>
             <div className='flexCenter gap-24'>
             <h1 className='bold-20 '>Simplex</h1>

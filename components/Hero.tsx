@@ -10,7 +10,7 @@ import { motion } from 'framer-motion';
 const Hero = () => {
   return (
     <div className='w-full h-screen'>
-    <div className='w-full h-full max-container padding-container flex items-center justify-between py-20 gap-4'>
+    <div className='w-full h-full max-container padding-container flex items-center justify-between  gap-4'>
       <div className='w-full lg:w-1/2 flex flex-col gap-2'>
         <h1 className='bold-40 md:bold-66 my-4 '> <span className='bg-gradient-to-r from-sky-400 via-red-600 to-indigo-500 bg-clip-text text-transparent'>Comprehensive</span> <br /> IT Solutions</h1>
         <p className='w-full regular-14 md:regular-16  xl:max-w-[550px] leading-snug tracking-normal text-black dark:text-gray-200'>
