@@ -3,40 +3,9 @@ import React from 'react';
 import { FooterLinks, Locations } from '@/app/Constants';
 import { RiMapPin3Fill } from "react-icons/ri";
 import { AnimatedTooltip } from './ui/AnimatedTooltip';
-import UserImg from '@/public/user.jpg';
 
-const people = [
-  {
-    id: 1,
-    name: "Moses Muia",
-    designation: "Manager",
-    image: UserImg.src,
-  },
-  {
-    id: 2,
-    name: "Moses Waithaka",
-    designation: "Technical Support",
-    image: UserImg.src,
-  },
-  {
-    id: 3,
-    name: "Jane Smith",
-    designation: "Data Scientist",
-    image: UserImg.src,
-  },
-  {
-    id: 4,
-    name: "Lawrence Kinyua",
-    designation: "Technical Support",
-    image: UserImg.src,
-  },
-  {
-    id: 5,
-    name: "Mary Wanjiru",
-    designation: "Technical Support",
-    image: UserImg.src,
-  },
-];
+
+
 
 
 const Footer = () => {
@@ -54,9 +23,6 @@ const Footer = () => {
               <p>{location.label}</p>
             </div>
           ))}
-          <div className='flex flex-row items-center justify-start mt-5'>
-            <AnimatedTooltip items={people} />            
-          </div>
         </div>
         <div className='grid md:grid-cols-3 gap-8'>
           {FooterLinks.map((column) => (

@@ -26,10 +26,10 @@ const Modal = ({isOpen,onClose,content}:ModalProps)=>{
 if (!isOpen) return null;
 
 return (
-  <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 duration-500 px-4">
-  <div className="bg-white dark:bg-[#1a1a1a] p-6 lg:p-7 rounded-xl max-w-screen-md w-full relative flex flex-col gap-3">
-  <h2 className="bold-16 py-2">{content.name}</h2>
-    <div className="shadow-xl rounded-xl min-h-[12rem]">
+  <div className="fixed inset-0 bg-black/55 drop-shadow-lg flex items-center justify-center z-50 duration-500 px-4">
+  <div className="bg-white dark:bg-[#1a1a1a] p-6 lg:p-7 rounded-2xl max-w-screen-md w-full relative flex flex-col gap-3">
+  <h2 className="bold-16 lg:bold-20 py-2">{content.name}</h2>
+    <div className="shadow-xl rounded-xl min-h-[14rem]">
       <div className="flex justify-center">
       </div>
     </div>
@@ -40,8 +40,8 @@ return (
       <h3 className="bold-16">Service Highlights</h3>
       <ul className="">
            {content.highlights.map((highlight,id)=>{
-            return <li key={id} className='flex gap-2 items-center'>
-              <FaCheck size={10}/><span className="bold-14 regular-14 md:text-[15px] font-[400]">{highlight} </span>
+            return <li key={id} className='flex gap-3 items-center'>
+              <FaCheck size={10} className='text-blue-500'/><span className="bold-14 regular-14 md:text-[15px] font-[400] text-gray-700 dark:text-gray-300">{highlight} </span>
             </li>
            })}
           </ul>

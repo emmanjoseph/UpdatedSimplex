@@ -14,7 +14,7 @@ const Intro = () => {
             transition={{ delay: 0.3, duration: 0.8 }}
             className='bold-32 md:bold-66 text-center mb-4 '
           >
-            Get The <span className='bg-gradient-to-r from-sky-400 via-red-600 to-indigo-500 bg-clip-text text-transparent'>Best</span> <br /> From Us
+            Get The Best <br /> From Us
           </motion.h1>
         </div> 
 

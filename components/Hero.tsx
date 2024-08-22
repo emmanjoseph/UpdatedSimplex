@@ -1,5 +1,14 @@
 'use client'
 import React from 'react';
+import { FlipWords } from './ui/FlipWords';
+import { AnimatedTooltip } from './ui/AnimatedTooltip';
+import { people } from '@/app/Constants';
+import Cctv from '@/public/cctv.jpg'
+import Internet from '@/public/internet.jpg'
+import Image from 'next/image';
+import { GlowingStarsBackgroundCard, GlowingStarsDescription, GlowingStarsTitle } from './ui/glowing-stars';
+import { FaArrowRight } from 'react-icons/fa6';
+import Link from 'next/link';
 
 const Hero = () => {
   return (
@@ -9,26 +18,52 @@ const Hero = () => {
       <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"/>
       <div className='w-full h-full max-container padding-container flex items-center justify-center  gap-4 py-36'>
        <div className='lg:w-1/2 flex flex-col gap-2'>
-         <h1 className='bold-40 md:bold-66 my-4  '>Comprehensive<br />Solutions</h1>
-         <p className='w-full regular-14 md:regular-16  xl:max-w-[700px] leading-snug tracking-normal text-black dark:text-gray-200'>
-               We provide top-notch IT solutions tailored to meet your business needs. 
+       <div className='flex flex-row items-center justify-start mt-9'>
+            <AnimatedTooltip items={people} />            
+          </div>
+         <h1 className='bold-40 md:bold-66 my-4  '>Comprehensive<br />
+         <FlipWords words={['Communication','Electrical','Security']}/> <br />
+         Solutions</h1>
+         <p className='w-full regular-14 md:regular-16  xl:max-w-[550px] leading-snug tracking-normal text-black dark:text-gray-200'>
+               We provide top-notch solutions tailored to meet your business needs. 
              From infrastructure management to your security, our expert team ensures 
              your technology operates at its best, driving your success forward.'
          </p>
+
+         <div className="mt-9 flex flex-col lg:flex-row">
          <button className="w-full lg:w-1/2 relative inline-flex h-12  overflow-hidden rounded-lg p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 mt-9">
            <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
            <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-slate-950 px-3 py-1 text-sm font-medium text-white backdrop-blur-3xl">
              Explore More
            </span>
          </button>
+         </div>       
        </div>
 
-       <div className='w-1/2 h-full hidden lg:grid gap-2'>
-        <div className='border rounded-lg '>
-          pic
+       <div className='w-1/2 h-full hidden lg:grid grid-rows-2 gap-3 z-10'>
+        <div className='border rounded-lg'>
+          <Image src={Cctv} alt='hero1' className='rounded-lg h-full object-cover'/>
         </div>
-        <div className='border rounded-lg '>
-          pic
+        <div className='border rounded-lg grid grid-cols-2 gap-3'>
+          <div>
+            <Image src={Internet} alt='internet' className='rounded-lg h-full object-cover'/>
+          </div>
+          <div>
+          <div className="flex items-center justify-center antialiased">
+      <GlowingStarsBackgroundCard>
+        <GlowingStarsTitle>More About us</GlowingStarsTitle>
+        <div className="flex justify-between items-end">
+          <GlowingStarsDescription>
+            Learn more
+          </GlowingStarsDescription>
+          <div className="h-8 w-8 rounded-full bg-[hsla(0,0%,100%,.1)] flex items-center justify-center">
+            {/* <Icon /> */}<Link href='/about' className='cursor-pointer'> <FaArrowRight size={20}/></Link>
+          </div>
+        </div>
+      </GlowingStarsBackgroundCard>
+    </div>
+
+          </div>
         </div>
        </div>
        </div>

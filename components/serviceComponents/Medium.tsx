@@ -21,17 +21,16 @@ const Medium = () => {
 
     return (
         <div className='max-container padding-container mt-6'>
-            <div className='flex items-center justify-between'>
-                <h1 className='hidden lg:block bold-18'>Category</h1>
-                <div className='flex justify-between gap-2 lg:gap-6'>
+            <div className='flex items-center justify-center'>
+                <div className='flex justify-between gap-2'>
                     {category.map((category) => (
-                        <TailwindButton
+                        
+                        <button
                             key={category.id}
-                            text={category.title}
-                            className={`text-sm px-3 py-2 ${selectedItem === category.id ? 'bg-gradient-to-r from-sky-400 via-red-600 to-indigo-500 bg-clip-text text-transparent dark:border-white' : 'bg-none text-black'}`}
+                            className={`text-sm px-3 py-2 ${selectedItem === category.id ? 'bg-blue-500 text-white border-none transition-colors duration-all' : 'bg-none text-black'} rounded-full shadow-md dark:text-gray-200 dark:shadow-white/10`}
                             onClick={() => setSelectedItem(category.id)}
                             aria-pressed={selectedItem === category.id}
-                        />
+                        > {category.title}</button>
                     ))}
                 </div>
             </div>
