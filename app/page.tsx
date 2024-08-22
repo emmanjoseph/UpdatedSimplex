@@ -1,5 +1,6 @@
 
 import FeaturedServices from '@/components/FeaturedServices'
+import { FeaturesSectionDemo } from '@/components/Features'
 import Footer from '@/components/Footer'
 
 import Hero from '@/components/Hero'
@@ -15,8 +16,9 @@ const page = () => {
       <Hero/>
       <Intro />
     <FeaturedServices/>
-      {/* <Newsletter/> */}
+    <FeaturesSectionDemo/>
       <Testimonials/>
+      {/* <Newsletter/> */}
       <Footer/>
     </div>
   )

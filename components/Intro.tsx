@@ -4,7 +4,8 @@ import { motion } from 'framer-motion'
 
 const Intro = () => {
   return (
-    <section className='max-container padding-container py-10 lg:py-20 border-b'>
+    <section className='max-container padding-container py-10 lg:py-20'>
+      
       <div className='flex flex-col justify-center items-center'>
         <div className='flex items-center'>
           <motion.h1
