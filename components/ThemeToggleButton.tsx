@@ -1,41 +1,70 @@
 "use client"
 
-import * as React from "react"
+import * as React from "react";
 import { RiMoonClearLine } from "react-icons/ri";
 import { IoSunnyOutline } from "react-icons/io5";
-import { useTheme } from "next-themes"
-
-import { Button } from "@/components/ui/button"
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
+import { useTheme } from "next-themes";
+import { motion, AnimatePresence } from "framer-motion";
 
 export function ThemeToggleButton() {
-  const { setTheme } = useTheme()
+  const { setTheme } = useTheme();
+  const [open, setOpen] = React.useState(false);
+
+  const toggleDropdown = () => setOpen(!open);
 
   return (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button  size="icon">
-          <IoSunnyOutline className="h-[1rem] w-[1rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-          <RiMoonClearLine className="absolute h-[1rem] w-[1rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-          <span className="sr-only">Toggle theme</span>
-        </Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
-        <DropdownMenuItem onClick={() => setTheme("light")}>
-          Light
-        </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("dark")}>
-          Dark
-        </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("system")}>
-          System
-        </DropdownMenuItem>
-      </DropdownMenuContent>
-    </DropdownMenu>
-  )
+    <div className="relative">
+      <button
+        onClick={toggleDropdown}
+        className="flex items-center justify-center hover:bg-gray-200 dark:hover:bg-gray-800 rounded-full p-2 relative"
+      >
+        <motion.div
+          initial={{ opacity: 1, scale: 1 }}
+          animate={{ opacity: open ? 0 : 1, scale: open ? 0.5 : 1 }}
+          transition={{ duration: 0.3 }}
+        >
+          <IoSunnyOutline size={20} />
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: open ? 1 : 0, scale: open ? 1 : 0.5 }}
+          transition={{ duration: 0.3 }}
+          className="absolute"
+        >
+          <RiMoonClearLine size={20} />
+        </motion.div>
+        <span className="sr-only">Toggle theme</span>
+      </button>
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            className="absolute right-0 mt-2 bg-white dark:bg-[#1a1a1a] shadow-lg dark:shadow-none rounded-md p-1"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.9 }}
+            transition={{ duration: 0.2 }}
+          >
+            <button
+              onClick={() => setTheme("light")}
+              className="block w-full px-7 py-2 text-left text-gray-900 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-600 rounded-lg"
+            >
+              Light
+            </button>
+            <button
+              onClick={() => setTheme("dark")}
+              className="block w-full px-7 py-2 text-left text-gray-900 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-600 rounded-lg"
+            >
+              Dark
+            </button>
+            <button
+              onClick={() => setTheme("system")}
+              className="block w-full px-7 py-2 text-left text-gray-900 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-600 rounded-lg"
+            >
+              System
+            </button>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
 }

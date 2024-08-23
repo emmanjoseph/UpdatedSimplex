@@ -18,7 +18,7 @@ const Communication = () => {
     >
         <div className='flex items-center gap-3'>
         <div className='lg:w-1/2'>
-            <h1 className='bold-20 md:bold-32 py-2'>Internet Privision Services.</h1>
+            <h1 className='bold-20 md:bold-32 py-2'>Internet Privision</h1>
             <p className='regular-14 md:regular-16'>Stable and fast internet connectivity is essential for business growth . We provide services according to consumption and ability pocket wise</p>
         </div>
         <div className='hidden lg:block lg:w-1/2 p-2'>
@@ -35,7 +35,7 @@ const Communication = () => {
             <div className='w-full mt-4 grid md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-6'>
                 {internetServices.map((card)=>{
                     return (
-                        <div className='rounded-lg bg-white dark:bg-slate-400/15 shadow flexCenter flex-col p-7'
+                        <div className='rounded-lg bg-white dark:bg-slate-400/15 shadow flexCenter flex-col p-4'
                         key={card.heading}
                         >
                             <h1 className='bold-18 p-5 border-b mb-3'>{card.heading}</h1>

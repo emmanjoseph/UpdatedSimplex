@@ -76,7 +76,7 @@ const Security = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 0.2 }}
     >
-      <div className='flexCenter gap-3'>
+      <div className='flexCenter gap-3 '>
         <div className='lg:w-1/2'>
           <h1 className='bold-20 md:bold-32 py-2'>Security</h1>
           <p className='regular-14 md:regular-16'>At Simplex Technologies, we specialize in providing comprehensive security solutions to meet the evolving needs of our clients. Explore our specialized security services below:</p>
@@ -109,14 +109,13 @@ const Security = () => {
               <p className="regular-14">{item.description}</p>
             </div>
             <button
-              className="w-full lg:w-1/2 my-4 flex items-center gap-1 hover:gap-5 text-indigo-500 duration-150 transition-all "
+              className="w-full lg:w-1/2 my-4 flex items-center gap-1 hover:gap-2 text-blue-500 duration-150 transition-all "
               onClick={()=> handleLearnMoreClick(item)}
             >
-              <span className="regular-14 bg-gradient-to-r from-sky-400 via-red-600 to-indigo-500 bg-clip-text text-transparent">Learn more</span>
+              <span className="regular-14 text-blue-500">Learn more</span>
               <FaArrowRight size={18} />
             </button>
           </div>
-          
           )
         })}
       </div>

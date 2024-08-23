@@ -4,6 +4,7 @@ import Link from 'next/link';
 import React, { useState } from 'react';
 import { ThemeToggleButton } from './ThemeToggleButton';
 import { GrClose, GrMenu } from 'react-icons/gr';
+import { FaFacebook, FaWhatsapp } from "react-icons/fa";
 import { motion, AnimatePresence } from 'framer-motion';
 
 const Navbar = () => {
@@ -14,8 +15,8 @@ const Navbar = () => {
   };
 
   return (
-    <div className='w-full absolute top-0 left-0 z-10 bg-white dark:bg-black/20'>
-      <div className='max-container padding-container py-5 flexBetween'>
+    <div className='w-full fixed top-0 left-0 z-40 bg-white/55 dark:bg-black/55 backdrop-blur-md'>
+      <div className='max-container padding-container py-4 flexBetween'>
         <div className='flexCenter gap-24'>
           <h1 className='bold-20'>Simplex</h1>
           <div className='hidden lg:flexCenter gap-5'>
@@ -31,17 +32,21 @@ const Navbar = () => {
           </div>
         </div>
 
+        <div className='flex gap-2 items-center regular-14'>
+          <a href=""><FaWhatsapp size={20}/></a>
+          <a href=""><FaFacebook size={20}/></a>
         <ThemeToggleButton />
-
-        <button className='lg:hidden' onClick={toggleMenu}>
-          {isMenuOpen ? <GrClose size={25} /> : <GrMenu size={25} />}
-        </button>
+   <button className='lg:hidden' onClick={toggleMenu}>
+  {isMenuOpen ? <GrClose size={20} /> : <GrMenu size={20} />}
+</button>
+        </div>
+        
       </div>
 
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
-            className='absolute top-0 left-0 dark:bg-black/55 dark:text-white backdrop-blur-md w-full h-screen z-50 p-5 text-black bg-white/55'
+            className='absolute top-0 left-0 dark:bg-black/65 dark:text-white backdrop-blur-lg w-full h-screen z-50 p-5 text-black bg-white/65'
             initial={{ opacity: 0, x: '-100%' }}
             animate={{ opacity: 1, x: '0%' }}
             exit={{ opacity: 0, x: '-100%' }}

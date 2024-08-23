@@ -13,25 +13,25 @@ import Link from 'next/link';
 const Hero = () => {
   return (
 
-    <div className=" w-full h-[100vh] dark:bg-black bg-white  dark:bg-grid-white/[0.1] bg-grid-black/[0.1] relative flex items-center justify-center">
+    <div className=" w-full h-[100vh] dark:bg-black bg-white  dark:bg-grid-white/[0.1] bg-grid-black/[0.1] relative">
       {/* Radial gradient for the container to give a faded look */}
       <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"/>
       <div className='w-full h-full max-container padding-container flex items-center justify-center  gap-4 py-36'>
-       <div className='lg:w-1/2 flex flex-col gap-2'>
-       <div className='flex flex-row items-center justify-start mt-9'>
+       <div className='lg:w-1/2 flex flex-col'>
+       <div className='flex flex-row items-center justify-start my-4'>
             <AnimatedTooltip items={people} />            
           </div>
-         <h1 className='bold-40 md:bold-66 my-4  '>Comprehensive<br />
+         <h1 className='bold-40 md:bold-66'>Comprehensive<br />
          <FlipWords words={['Communication','Electrical','Security']}/> <br />
          Solutions</h1>
-         <p className='w-full regular-14 md:regular-16  xl:max-w-[550px] leading-snug tracking-normal text-black dark:text-gray-200'>
+         <p className='w-full my-4 regular-14 md:regular-16  xl:max-w-[680px] leading-snug tracking-normal text-black dark:text-gray-200'>
                We provide top-notch solutions tailored to meet your business needs. 
              From infrastructure management to your security, our expert team ensures 
              your technology operates at its best, driving your success forward.'
          </p>
 
          <div className="mt-9 flex flex-col lg:flex-row">
-         <button className="w-full lg:w-1/2 relative inline-flex h-12  overflow-hidden rounded-lg p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 mt-9">
+         <button className="w-full lg:w-1/2 relative inline-flex h-12  overflow-hidden rounded-lg p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 ">
            <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
            <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-slate-950 px-3 py-1 text-sm font-medium text-white backdrop-blur-3xl">
              Explore More
@@ -44,7 +44,7 @@ const Hero = () => {
         <div className='border rounded-lg'>
           <Image src={Cctv} alt='hero1' className='rounded-lg h-full object-cover'/>
         </div>
-        <div className='border rounded-lg grid grid-cols-2 gap-3'>
+        <div className='rounded-lg grid grid-cols-2 gap-3'>
           <div>
             <Image src={Internet} alt='internet' className='rounded-lg h-full object-cover'/>
           </div>

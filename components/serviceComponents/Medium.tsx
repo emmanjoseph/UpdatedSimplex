@@ -21,7 +21,7 @@ const Medium = () => {
 
     return (
         <div className='max-container padding-container mt-6'>
-            <div className='flex items-center justify-center'>
+            <div className='flex items-center justify-center z-20'>
                 <div className='flex justify-between gap-2'>
                     {category.map((category) => (
                         

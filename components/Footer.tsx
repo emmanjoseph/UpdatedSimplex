@@ -3,6 +3,7 @@ import React from 'react';
 import { FooterLinks, Locations } from '@/app/Constants';
 import { RiMapPin3Fill } from "react-icons/ri";
 import { AnimatedTooltip } from './ui/AnimatedTooltip';
+import Link from 'next/link';
 
 
 
@@ -31,9 +32,9 @@ const Footer = () => {
               <ul className='list-none'>
                 {column.links.map((link, index) => (
                   <li key={index}>
-                    <a href={link.link} className='text-primary regular-14 hover:underline'>
+                    <Link href={link.link} className='text-primary regular-14 hover:underline'>
                       {link.label}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>

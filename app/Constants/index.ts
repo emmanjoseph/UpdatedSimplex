@@ -18,8 +18,8 @@ import solarPowerImg from '@/public/solar-cell.png'
 export const NAV_LINKS = [
     { href: '/', key: 'home', label: 'Home' },
     { href: '/services', key: 'services', label: 'Services' },
-    { href: '/', key: 'about', label: 'About' },
-    { href: '/', key: 'contact_us', label: 'Contact Us' },
+    { href: '/about', key: 'about', label: 'About' },
+    // { href: '/', key: 'contact_us', label: 'Contact Us' },
   ];
 
   export const Locations=[
@@ -47,16 +47,16 @@ export const NAV_LINKS = [
     {key:'Services',title:'Services',
       links:[
         {
-          link:'',
-          label:'Internet Provision'
+          link:'/components/serviceComponents',
+          label:'Communication'
         },
         {
           link:'',
-          label:'Backup Systems'
+          label:'Security'
         },
         {
           link:'',
-          label:'Electrical services'
+          label:'Electrical'
         },
       ]
     },
