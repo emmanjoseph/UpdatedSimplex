@@ -3,9 +3,9 @@ import { NAV_LINKS } from '@/app/Constants';
 import Link from 'next/link';
 import React, { useState } from 'react';
 import { ThemeToggleButton } from './ThemeToggleButton';
-import { GrClose, GrMenu } from 'react-icons/gr';
-import { FaFacebook, FaWhatsapp } from "react-icons/fa";
+// import { GrClose, GrMenu } from 'react-icons/gr';
 import { motion, AnimatePresence } from 'framer-motion';
+import { GrClose, GrMenu } from 'react-icons/gr';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

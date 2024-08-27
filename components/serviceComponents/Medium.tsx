@@ -1,56 +1,43 @@
 'use client'
-import React, { useState, Suspense } from 'react'
+import React, { useState } from 'react'
 import dynamic from 'next/dynamic'
-import { motion, AnimatePresence } from 'framer-motion'
-import TailwindButton from '../ui/TailwindButton'
+import Top from './Top'
 
-// Dynamic import of components for better performance
-const Communication = dynamic(() => import('./Communication'), { suspense: true })
-const Security = dynamic(() => import('./Security'), { suspense: true })
-const Electrical = dynamic(() => import('./Electrical'), { suspense: true })
+const Communication = dynamic(()=> import('@/app/services/Communication'))
+const Security = dynamic(()=> import('@/app/services/Security'))
+const Electrical = dynamic(()=> import('@/app/services/Electrical'))
 
 const Medium = () => {
-    const [selectedItem, setSelectedItem] = useState(1);
-    const category = [
-        { id: 1, title: 'Communication', component: Communication },
-        { id: 2, title: 'Security', component: Security },
-        { id: 3, title: 'Electrical', component: Electrical },
-    ]
+    const [activeService, setActiveService] = useState('service1');
 
-    const SelectedComponent = category.find(cat => cat.id === selectedItem)?.component;
+     const renderServicePage = () => {
+    switch (activeService) {
+      case 'service1':
+        return <Communication />;
+      case 'service2':
+        return <Electrical />;
+      case 'service3':
+        return <Security />;
+      default:
+        return <Communication />;
+    }
+  }
+  return (
+    <div className='max-container padding-container'>
 
-    return (
-        <div className='max-container padding-container mt-6'>
-            <div className='flex items-center justify-center z-20'>
-                <div className='flex justify-between gap-2'>
-                    {category.map((category) => (
-                        
-                        <button
-                            key={category.id}
-                            className={`text-sm px-3 py-2 ${selectedItem === category.id ? 'bg-blue-500 text-white border-none transition-colors duration-all' : 'bg-none text-black'} rounded-full shadow-md dark:text-gray-200 dark:shadow-white/10`}
-                            onClick={() => setSelectedItem(category.id)}
-                            aria-pressed={selectedItem === category.id}
-                        > {category.title}</button>
-                    ))}
-                </div>
-            </div>
-            <div className='my-6'>
-                <AnimatePresence mode='wait'>
-                    <motion.div
-                        key={selectedItem}
-                        initial={{ opacity: 0, y: 50 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: 50 }}
-                        transition={{ duration: 0.5 }}
-                    >
-                        <Suspense fallback={<div>Loading...</div>}>
-                            {SelectedComponent && <SelectedComponent />}
-                        </Suspense>
-                    </motion.div>
-                </AnimatePresence>
-            </div>
+        <div className='w-full flexCenter'>
+            <div className='flex gap-2'>
+        <button className='px-3 py-2 rounded-full dark:bg-white dark:text-black regular-14 bg-black text-white' onClick={() => setActiveService('service1')}>Communication</button>
+        <button className='px-3 py-2 rounded-full dark:bg-white dark:text-black regular-14 bg-black text-white' onClick={() => setActiveService('service2')}>Electrical</button>
+        <button className='px-3 py-2 rounded-full dark:bg-white dark:text-black regular-14 bg-black text-white' onClick={() => setActiveService('service3')}>Security</button>
+      </div>
         </div>
-    )
+       
+      <div className='my-4'>
+        {renderServicePage()}
+      </div>
+    </div>
+  )
 }
 
 export default Medium

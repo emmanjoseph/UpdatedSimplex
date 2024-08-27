@@ -6,14 +6,15 @@ import TwoWayGate from '@/public/gate.png'
 import DoorBells from '@/public/doorbell.png'
 import Motion from '@/public/motion-detector.png'
 import Fence from '@/public/electric-fence.png'
-import highVoltageCablingImg from '@/public/wires.png'
-import homeWiringImg from '@/public/home.png'
-import commercialWiringImg from '@/public/home.png'
-import customizedProjectsImg from '@/public/clipboard.png'
-import learningInstitutionsImg from '@/public/home.png'
-import corporateResearchImg from '@/public/home.png'
-import powerBackupImg from '@/public/electric-generator.png'
-import solarPowerImg from '@/public/solar-cell.png'
+import highVoltageCablingImg from '@/public/highvoltage.jpg'
+import homeWiringImg from '@/public/homeCabling.jpg'
+import commercialWiringImg from '@/public/commercialBuilding.jpg'
+import customizedProjectsImg from '@/public/project.jpg'
+import learningInstitutionsImg from '@/public/learningInsitution.jpg'
+import corporateResearchImg from '@/public/learningInsitution.jpg'
+import powerBackupImg from '@/public/backup.jpg'
+import solarPowerImg from '@/public/solar.jpg'
+
 
 export const NAV_LINKS = [
     { href: '/', key: 'home', label: 'Home' },
@@ -47,7 +48,7 @@ export const NAV_LINKS = [
     {key:'Services',title:'Services',
       links:[
         {
-          link:'/components/serviceComponents',
+          link:'/services/Communication',
           label:'Communication'
         },
         {
@@ -159,7 +160,7 @@ export const NAV_LINKS = [
     {
       name: "Installation of Low Voltage Cables",
       description: "Enhances visibility and security.",
-      img: LowVoltageCable,
+      // img: LowVoltageCable,
       moreInfo: 'We provide installation of low voltage cables to enhance visibility and security in various settings including industrial, commercial, and residential areas. Our services ensure safety and efficiency through proper installation, maintenance, and repair.',
       highlights: [
         "Industrial, commercial, and residential solutions",
@@ -170,7 +171,7 @@ export const NAV_LINKS = [
     {
       name: "Installation of Security Cameras",
       description: "Helps in monitoring and recording events for future clarification.",
-      img: CCTV,
+      // img: CCTV,
       moreInfo: 'Our security camera installation services help in monitoring and recording events for future clarification. We offer solutions for industrial, commercial, and residential needs, ensuring safety and efficiency.',
       highlights: [
         "Industrial, commercial, and residential solutions",
@@ -181,7 +182,7 @@ export const NAV_LINKS = [
     {
       name: "Installation of Alarm Systems",
       description: "Provides alert mechanisms to enhance safety and security.",
-      img: AlarmSysytem,
+      // img: AlarmSysytem,
       moreInfo: 'We install alarm systems that provide alert mechanisms to enhance safety and security in various environments. Our services cover industrial, commercial, and residential areas, ensuring safety and efficiency.',
       highlights: [
         "Industrial, commercial, and residential solutions",
@@ -192,7 +193,7 @@ export const NAV_LINKS = [
     {
       name: "Installation of Two-Way Gate Communication Systems",
       description: "Facilitates secure communication for gated entries.",
-      img: TwoWayGate,
+      // img: TwoWayGate,
       moreInfo: 'Our two-way gate communication systems facilitate secure communication for gated entries, enhancing security for industrial, commercial, and residential properties. We ensure safety and efficiency through proper installation and maintenance.',
       highlights: [
         "Industrial, commercial, and residential solutions",
@@ -203,7 +204,7 @@ export const NAV_LINKS = [
     {
       name: "Installation of Doorbells",
       description: "Integrates with communication systems for secure access.",
-      img: DoorBells,
+      // img: DoorBells,
       moreInfo: 'We provide installation of doorbells that integrate with communication systems for secure access. Our services cater to industrial, commercial, and residential needs, ensuring safety and efficiency.',
       highlights: [
         "Industrial, commercial, and residential solutions",
@@ -214,7 +215,7 @@ export const NAV_LINKS = [
     {
       name: "Installation of Motion Detectors",
       description: "Detects movement to prevent unauthorized access.",
-      img: Motion,
+      // img: Motion,
       moreInfo: 'Our motion detectors detect movement to prevent unauthorized access, providing enhanced security for industrial, commercial, and residential areas. We ensure safety and efficiency through proper installation, maintenance, and repair.',
       highlights: [
         "Industrial, commercial, and residential solutions",
@@ -225,7 +226,7 @@ export const NAV_LINKS = [
     {
       name: "Installation of Electrical Fences",
       description: "Provides a robust perimeter security solution.",
-      img: Fence,
+      // img: Fence,
       moreInfo: 'We install electrical fences that provide a robust perimeter security solution for various settings including industrial, commercial, and residential properties. Our services ensure safety and efficiency through proper installation, maintenance, and repair.',
       highlights: [
         "Industrial, commercial, and residential solutions",
@@ -260,7 +261,7 @@ export const NAV_LINKS = [
     {
       name: "Commercial Building Wiring",
       description: "Comprehensive wiring solutions for commercial buildings.",
-      img: commercialWiringImg,
+      img:commercialWiringImg,
       moreInfo: "We provide comprehensive wiring solutions for commercial buildings, including offices, retail spaces, and warehouses. Our team ensures minimal disruption to your operations during installation and maintenance.",
       highlights: [
         "Offices, retail spaces, and warehouses",
@@ -271,7 +272,7 @@ export const NAV_LINKS = [
     {
       name: "Customized Electrical Projects",
       description: "Tailored electrical solutions for specific requirements.",
-      img: customizedProjectsImg,
+      img:customizedProjectsImg,
       moreInfo: "Our customized electrical projects cater to unique requirements, including specialized equipment installations, energy-efficient solutions, and smart home integrations. We work closely with clients to deliver tailored solutions.",
       highlights: [
         "Specialized equipment installations",
@@ -293,7 +294,7 @@ export const NAV_LINKS = [
     {
       name: "Electrical Projects for Corporate Research",
       description: "Electrical solutions for corporate research facilities.",
-      img: corporateResearchImg,
+      img: learningInstitutionsImg,
       moreInfo: "Our electrical solutions for corporate research facilities include specialized power systems, data center wiring, and laboratory electrical installations. We ensure the highest standards of safety and reliability.",
       highlights: [
         "Specialized power systems",
