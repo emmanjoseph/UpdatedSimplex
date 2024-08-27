@@ -13,51 +13,51 @@ import { cn } from "@/lib/utils";
 export function FeaturesSectionDemo() {
   const features = [
     {
-      title: "Quality Services ",
+      title: "Quality Services",
       description:
-        "Our platform grows with you. From startups to enterprises, we scale effortlessly to meet your needs.",
+        "Experience top-notch services designed to grow with your business, ensuring consistent quality at every stage.",
       // icon: <IconGrowth />,
     },
     {
       title: "Affordable Plans",
       description:
-        "Enterprise-grade security protocols to keep your data safe and sound, 24/7.",
+        "Choose from a range of cost-effective plans tailored to fit your budget without compromising on quality.",
       // icon: <IconShieldCheck />,
     },
     {
       title: "Customizable Workflows",
       description:
-        "Tailor the platform to match your team's workflow, with customizable settings and automation.",
+        "Optimize productivity with workflows that can be tailored to meet the specific needs of your team.",
       // icon: <IconSettings />,
     },
     {
       title: "Real-Time Collaboration",
       description:
-        "Work together seamlessly with real-time collaboration tools that make remote teamwork a breeze.",
+        "Enhance team synergy with tools that enable seamless collaboration, no matter where your team is located.",
       // icon: <IconUsers />,
     },
     {
       title: "Global Accessibility",
       description:
-        "Access your data and tools from anywhere in the world, with multilingual support and cloud infrastructure.",
+        "Access your tools and data from anywhere, with a global infrastructure that ensures uninterrupted service.",
       // icon: <IconGlobe />,
     },
     {
       title: "In-Depth Analytics",
       description:
-        "Gain insights with comprehensive analytics that help you track performance and optimize operations.",
+        "Leverage detailed analytics to gain actionable insights, helping you make informed decisions and drive growth.",
       // icon: <IconChartBar />,
     },
     {
       title: "Flexible Integration",
       description:
-        "Easily connect with the tools you already use, thanks to our wide range of integrations.",
+        "Integrate easily with existing systems, allowing for a smooth transition and uninterrupted workflow.",
       // icon: <IconPlug />,
     },
     {
       title: "Customer Support",
       description:
-        "Our support team is available around the clock, providing help whenever and wherever you need it.",
+        "Our dedicated support team is available around the clock to assist you with any issues or questions.",
       // icon: <IconHelp />,
     },
   ];

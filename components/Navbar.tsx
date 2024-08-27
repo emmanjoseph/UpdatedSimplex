@@ -33,8 +33,8 @@ const Navbar = () => {
         </div>
 
         <div className='flex gap-2 items-center regular-14'>
-          <a href=""><FaWhatsapp size={20}/></a>
-          <a href=""><FaFacebook size={20}/></a>
+          <a href="" className='text-[14px] p-1 hover:bg-gray-300/30 rounded-lg'>Facebook</a>
+          <a href="" className='text-[14px] p-1 hover:bg-gray-300/30 rounded-lg'>Whatsapp</a>
         <ThemeToggleButton />
    <button className='lg:hidden' onClick={toggleMenu}>
   {isMenuOpen ? <GrClose size={20} /> : <GrMenu size={20} />}
