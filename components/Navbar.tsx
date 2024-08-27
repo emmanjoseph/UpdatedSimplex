@@ -15,7 +15,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className='w-full fixed top-0 left-0 z-40 bg-white/55 dark:bg-black/55 backdrop-blur-md'>
+    <div className='w-full absolute top-0 left-0 z-40 bg-white/55 dark:bg-black/55 backdrop-blur-md'>
       <div className='max-container padding-container py-4 flexBetween'>
         <div className='flexCenter gap-24'>
           <h1 className='bold-20'>Simplex</h1>
@@ -33,8 +33,11 @@ const Navbar = () => {
         </div>
 
         <div className='flex gap-2 items-center regular-14'>
-          <a href=""><FaWhatsapp size={20}/></a>
+          <div className='hidden lg:flex gap-2'>
+            <a href=""><FaWhatsapp size={20}/></a>
           <a href=""><FaFacebook size={20}/></a>
+          </div>
+          
         <ThemeToggleButton />
    <button className='lg:hidden' onClick={toggleMenu}>
   {isMenuOpen ? <GrClose size={20} /> : <GrMenu size={20} />}

@@ -13,15 +13,15 @@ import Link from 'next/link';
 const Hero = () => {
   return (
 
-    <div className=" w-full h-[100vh] dark:bg-black bg-white  dark:bg-grid-white/[0.1] bg-grid-black/[0.1] relative">
+    <div className=" w-full dark:bg-black bg-white  dark:bg-grid-white/[0.1] bg-grid-black/[0.1] relative">
       {/* Radial gradient for the container to give a faded look */}
       <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"/>
-      <div className='w-full h-full max-container padding-container flex items-center justify-center  gap-4 py-36'>
+      <div className='w-full h-full max-container padding-container flex items-center justify-center  gap-4 py-32'>
        <div className='lg:w-1/2 flex flex-col'>
        <div className='flex flex-row items-center justify-start my-4'>
             <AnimatedTooltip items={people} />            
           </div>
-         <h1 className='bold-40 md:bold-66'>Comprehensive<br />
+         <h1 className='bold-40 md:bold-66 leading-tight'>Comprehensive<br />
          <FlipWords words={['Communication','Electrical','Security']}/> <br />
          Solutions</h1>
          <p className='w-full my-4 regular-14 md:regular-16  xl:max-w-[680px] leading-snug tracking-normal text-black dark:text-gray-200'>
@@ -40,7 +40,7 @@ const Hero = () => {
          </div>       
        </div>
 
-       <div className='w-1/2 h-full hidden lg:grid grid-rows-2 gap-3 z-10'>
+       <div className='w-1/2  hidden lg:grid grid-rows-2 gap-3 z-10'>
         <div className='border rounded-lg'>
           <Image src={Cctv} alt='hero1' className='rounded-lg h-full object-cover'/>
         </div>

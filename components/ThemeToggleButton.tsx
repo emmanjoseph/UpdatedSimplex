@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import * as React from "react";
 import { RiMoonClearLine } from "react-icons/ri";
@@ -11,6 +11,11 @@ export function ThemeToggleButton() {
   const [open, setOpen] = React.useState(false);
 
   const toggleDropdown = () => setOpen(!open);
+
+  const handleThemeChange = (theme: React.SetStateAction<string>) => {
+    setTheme(theme);
+    setOpen(false); // Close the popup after setting the theme
+  };
 
   return (
     <div className="relative">
@@ -45,19 +50,19 @@ export function ThemeToggleButton() {
             transition={{ duration: 0.2 }}
           >
             <button
-              onClick={() => setTheme("light")}
+              onClick={() => handleThemeChange("light")}
               className="block w-full px-7 py-2 text-left text-gray-900 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-600 rounded-lg"
             >
               Light
             </button>
             <button
-              onClick={() => setTheme("dark")}
+              onClick={() => handleThemeChange("dark")}
               className="block w-full px-7 py-2 text-left text-gray-900 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-600 rounded-lg"
             >
               Dark
             </button>
             <button
-              onClick={() => setTheme("system")}
+              onClick={() => handleThemeChange("system")}
               className="block w-full px-7 py-2 text-left text-gray-900 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-600 rounded-lg"
             >
               System

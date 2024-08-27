@@ -15,6 +15,7 @@ import corporateResearchImg from '@/public/home.png'
 import powerBackupImg from '@/public/electric-generator.png'
 import solarPowerImg from '@/public/solar-cell.png'
 
+
 export const NAV_LINKS = [
     { href: '/', key: 'home', label: 'Home' },
     { href: '/services', key: 'services', label: 'Services' },
@@ -47,7 +48,7 @@ export const NAV_LINKS = [
     {key:'Services',title:'Services',
       links:[
         {
-          link:'/components/serviceComponents',
+          link:'/services/Communication',
           label:'Communication'
         },
         {
