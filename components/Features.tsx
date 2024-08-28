@@ -25,16 +25,16 @@ export function FeaturesSectionDemo() {
       // icon: <IconShieldCheck />,
     },
     {
-      title: "Customizable Workflows",
+      title: "Customizable Solutions",
       description:
-        "Optimize productivity with workflows that can be tailored to meet the specific needs of your team.",
+        "Tailor our services to fit your unique requirements, whether it's communication, electrical, or security needs.",
       // icon: <IconSettings />,
     },
     {
-      title: "Real-Time Collaboration",
+      title: "Reliable Electrical Solutions",
       description:
-        "Enhance team synergy with tools that enable seamless collaboration, no matter where your team is located.",
-      // icon: <IconUsers />,
+        "Delivering high-quality electrical services, ensuring safety and efficiency for both residential and commercial projects.",
+      // icon: <IconElectrical />,
     },
     {
       title: "Global Accessibility",
@@ -49,9 +49,9 @@ export function FeaturesSectionDemo() {
       // icon: <IconChartBar />,
     },
     {
-      title: "Flexible Integration",
+      title: "Seamless Integration",
       description:
-        "Integrate easily with existing systems, allowing for a smooth transition and uninterrupted workflow.",
+        "Our solutions integrate smoothly with your existing infrastructure, ensuring a hassle-free experience.",
       // icon: <IconPlug />,
     },
     {

@@ -1,11 +1,11 @@
 import UserImg from '@/public/user.jpg';
-import CCTV from '@/public/cctv-camera.png'
-import LowVoltageCable from '@/public/cable.png'
-import AlarmSysytem from '@/public/alarm.png'
-import TwoWayGate from '@/public/gate.png'
-import DoorBells from '@/public/doorbell.png'
-import Motion from '@/public/motion-detector.png'
-import Fence from '@/public/electric-fence.png'
+import CCTV from '@/public/securityCamera.jpg'
+import LowVoltageCable from '@/public/lowVoltage.jpg'
+import AlarmSysytem from '@/public/alarm.jpg'
+import TwoWayGate from '@/public/doorBell.jpg'
+import DoorBells from '@/public/doorBell.jpg'
+import Motion from '@/public/doorBell.jpg'
+import Fence from '@/public/electricfence.jpg'
 import highVoltageCablingImg from '@/public/highvoltage.jpg'
 import homeWiringImg from '@/public/homeCabling.jpg'
 import commercialWiringImg from '@/public/commercialBuilding.jpg'
@@ -48,15 +48,15 @@ export const NAV_LINKS = [
     {key:'Services',title:'Services',
       links:[
         {
-          link:'/services/Communication',
+          link:'/services',
           label:'Communication'
         },
         {
-          link:'',
+          link:'/services',
           label:'Security'
         },
         {
-          link:'',
+          link:'/services',
           label:'Electrical'
         },
       ]
@@ -160,7 +160,7 @@ export const NAV_LINKS = [
     {
       name: "Installation of Low Voltage Cables",
       description: "Enhances visibility and security.",
-      // img: LowVoltageCable,
+      img: LowVoltageCable,
       moreInfo: 'We provide installation of low voltage cables to enhance visibility and security in various settings including industrial, commercial, and residential areas. Our services ensure safety and efficiency through proper installation, maintenance, and repair.',
       highlights: [
         "Industrial, commercial, and residential solutions",
@@ -171,7 +171,7 @@ export const NAV_LINKS = [
     {
       name: "Installation of Security Cameras",
       description: "Helps in monitoring and recording events for future clarification.",
-      // img: CCTV,
+      img: CCTV,
       moreInfo: 'Our security camera installation services help in monitoring and recording events for future clarification. We offer solutions for industrial, commercial, and residential needs, ensuring safety and efficiency.',
       highlights: [
         "Industrial, commercial, and residential solutions",
@@ -182,7 +182,7 @@ export const NAV_LINKS = [
     {
       name: "Installation of Alarm Systems",
       description: "Provides alert mechanisms to enhance safety and security.",
-      // img: AlarmSysytem,
+      img: AlarmSysytem,
       moreInfo: 'We install alarm systems that provide alert mechanisms to enhance safety and security in various environments. Our services cover industrial, commercial, and residential areas, ensuring safety and efficiency.',
       highlights: [
         "Industrial, commercial, and residential solutions",
@@ -193,7 +193,7 @@ export const NAV_LINKS = [
     {
       name: "Installation of Two-Way Gate Communication Systems",
       description: "Facilitates secure communication for gated entries.",
-      // img: TwoWayGate,
+      img: TwoWayGate,
       moreInfo: 'Our two-way gate communication systems facilitate secure communication for gated entries, enhancing security for industrial, commercial, and residential properties. We ensure safety and efficiency through proper installation and maintenance.',
       highlights: [
         "Industrial, commercial, and residential solutions",
@@ -204,7 +204,7 @@ export const NAV_LINKS = [
     {
       name: "Installation of Doorbells",
       description: "Integrates with communication systems for secure access.",
-      // img: DoorBells,
+      img: DoorBells,
       moreInfo: 'We provide installation of doorbells that integrate with communication systems for secure access. Our services cater to industrial, commercial, and residential needs, ensuring safety and efficiency.',
       highlights: [
         "Industrial, commercial, and residential solutions",
@@ -215,7 +215,7 @@ export const NAV_LINKS = [
     {
       name: "Installation of Motion Detectors",
       description: "Detects movement to prevent unauthorized access.",
-      // img: Motion,
+      img: Motion,
       moreInfo: 'Our motion detectors detect movement to prevent unauthorized access, providing enhanced security for industrial, commercial, and residential areas. We ensure safety and efficiency through proper installation, maintenance, and repair.',
       highlights: [
         "Industrial, commercial, and residential solutions",
@@ -226,7 +226,7 @@ export const NAV_LINKS = [
     {
       name: "Installation of Electrical Fences",
       description: "Provides a robust perimeter security solution.",
-      // img: Fence,
+      img: Fence,
       moreInfo: 'We install electrical fences that provide a robust perimeter security solution for various settings including industrial, commercial, and residential properties. Our services ensure safety and efficiency through proper installation, maintenance, and repair.',
       highlights: [
         "Industrial, commercial, and residential solutions",
@@ -314,7 +314,7 @@ export const NAV_LINKS = [
       ]
     },
     {
-      name: "Solar Power Installations",
+      name: "Solar Power Installation",
       description: "Sustainable and efficient solar power solutions.",
       img: solarPowerImg,
       moreInfo: "Our solar power installation services offer sustainable and cost-effective energy solutions for residential and commercial properties. We handle everything from system design to installation and maintenance.",

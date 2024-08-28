@@ -7,13 +7,14 @@ import { securityServices } from '../Constants'
 import { FaCalendar, FaCheck, FaChevronRight, FaPhone } from 'react-icons/fa6'
 import { IoMdClose } from 'react-icons/io'
 import { toast } from '@/components/ui/use-toast'
+import { GiSmartphone } from 'react-icons/gi'
 
 
 
 interface SecurityServices {
   name: string;
   description: string;
-  // img: StaticImageData;
+  img: StaticImageData;
   moreInfo: string;
   highlights: string[];
 }
@@ -46,60 +47,66 @@ const Modal = ({ isOpen, onClose, content }: ModalProps) => {
       aria-modal="true"
     >
       <div 
-        className="bg-white dark:bg-[#1a1a1a] p-6 lg:p-7 rounded-xl max-w-screen-md w-full relative flex flex-col gap-3 animate-slideIn"
+        className="bg-white dark:bg-[#1a1a1a] rounded-xl max-w-screen-lg w-full lg:h-3/5 relative flex flex-col md:flex-col lg:flex-row gap-3 animate-slideIn"
         tabIndex={-1}
       >
 
         {/* Image Area */}
-        <div className="shadow-xl rounded-xl min-h-[15em]">
-          {/* <Image src={content.imageSrc || fallbackImage} alt={content.name} className='h-[15rem] object-cover rounded-xl'/> */}
+        <div className="lg:w-2/5 relative shadow-xl min-h-[5em] rounded-xl lg:rounded-l-xl overflow-hidden">
+          <div className='absolute h-full w-full bg-gradient-to-b from-black to-black/30 lg:bg-gradient-to-r '></div>
+          <Image 
+            src={content.img} 
+            alt='' 
+            className='w-full h-[300px] lg:h-full object-cover rounded-t-xl lg:rounded-l-xl'
+          />
+          <div className="absolute top-4 left-4 text-white z-10 flex items-center h-full p-2">
+            <h1 className='bold-20 lg:hidden'>{content.name}</h1>
+          </div>
         </div>
-        <h2 id="modal-title" className="mt-5 bold-18 lg:bold-20 py-2">{content.name}</h2>
 
         {/* Description */}
-        <div>
-          <p className="regular-14 md:text-[15px] font-[400]">{content.moreInfo}</p>
-        </div>
+        <div className='lg:w-3/5 p-4 lg:p-6 flex flex-col justify-center'>
+          <h2 id="modal-title" className="hidden lg:block mt-5 bold-18 lg:bold-32 py-2">{content.name}</h2>
+          <p className="regular-14 font-[400] dark:text-gray-200 my-2 w-full">{content.moreInfo}</p>
 
-        {/* Highlights */}
-        <div className="">
-          <h3 className="bold-18">Service Highlights</h3>
-          <ul className="">
-            {content.highlights.map((highlight, id) => (
-              <li key={id} className='flex gap-2 items-center'>
-                <FaCheck size={10}/><span className="bold-14 regular-14 font-[400]">{highlight}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        {/* Footer or additional actions */}
-        <div className="my-3 w-full flex justify-between flex-col lg:flex-row  gap-3">
-          <div>
-            <h2 className='bold-18'>Contact us</h2>
-            <ul className='flex gap-4 mt-2'>
-              <li
-              className='flex regular-14 gap-1 items-center'
-              ><FaPhone/><p>0722966576</p></li>
-              <li
-              className='flex regular-14 gap-1 items-center'
-              ><FaPhone/><p>0733966576</p></li>
-              <li
-              className='flex regular-14 gap-1 items-center'
-              ><FaPhone/><p>0777966576</p></li>
+          {/* Highlights */}
+          <div className="">
+            <h3 className="bold-16 py-2">Service Highlights</h3>
+            <ul className="">
+              {content.highlights.map((highlight, id) => (
+                <li key={id} className='flex gap-2 items-center'>
+                  <FaCheck size={10}/><span className="regular-14 font-[400] dark:text-gray-200">{highlight}</span>
+                </li>
+              ))}
             </ul>
           </div>
+
+          {/* Footer or additional actions */}
+          <div className='py-5  border-b dark:border-gray-200'>
+            <h1 className='bold-16'>Contact us</h1>
+            <ul className='flex gap-2 lg:gap-5 text-sm text-black/90 dark:text-gray-200 '>
+              <li className='flex items-center gap-1'><GiSmartphone/>0722966576</li>
+              <li className='flex items-center gap-1'><GiSmartphone/>0733966576</li>
+              <li className='flex items-center gap-1'><GiSmartphone/>0777966576</li>
+            </ul>
+
+           
+          </div>
+          <div className='flexEnd'>
           <button 
-            onClick={() => toast({
-              title:'Hello user',
-              description:'System under maintenance use contacts instaed'
-            })}
-            className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition duration-300 flexCenter regular-14 gap-2"
-            // disabled
-          >
-            <p>Schedule a date</p>
-            <FaCalendar size={15}/>
-          </button>
+              onClick={() => toast({
+                title:'Hello user',
+                description:'System under maintenance use contacts instaed'
+              })}
+              className=" my-2 w-full lg:w-2/5 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition duration-300 flexCenter regular-14 gap-2 mt-4"
+            >
+              <p>Schedule a date</p>
+              <FaCalendar size={15}/>
+            </button>
+          </div>
+          
+           
+        
         </div>
 
         {/* Close Button */}
@@ -158,10 +165,11 @@ const Security = () => {
         key={card.name} 
         className='shadow-lg rounded-xl dark:shadow-none dark:border dark:border-gray-200/20 flex flex-col gap-2 h-full'>
         
-        {/* Fixed height for image/content area */}
-        <div className='w-full bg-gray-300/10 h-48 rounded-t-xl flex items-center justify-center'>
-          {/* Image or content goes here */}
-          {/* <h1 className='bold-16'>{card.name}</h1> */}
+         {/* Fixed height for image/content area */}
+         <div className='w-full bg-gray-300/10 h-48 rounded-t-xl flex items-center justify-center'>
+         <Image src={card.img} alt='image'
+         className='w-full h-full object-cover rounded-t-xl'
+         />
         </div>
       
         {/* Uniform text content */}

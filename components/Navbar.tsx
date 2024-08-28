@@ -58,6 +58,7 @@ const Navbar = () => {
             <div className='flex flex-col gap-2 py-10'>
               {NAV_LINKS.map((link) => (
                 <Link
+                onClick={toggleMenu}
                   key={link.key}
                   href={link.href}
                   className='text-[14px] hover:text-blue-500 duration-150 transition-colors'
