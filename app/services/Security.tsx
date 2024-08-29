@@ -52,8 +52,8 @@ const Modal = ({ isOpen, onClose, content }: ModalProps) => {
       >
 
         {/* Image Area */}
-        <div className="lg:w-2/5 relative shadow-xl min-h-[5em] rounded-xl lg:rounded-l-xl overflow-hidden">
-          <div className='absolute h-full w-full bg-gradient-to-b from-black to-black/30 lg:bg-gradient-to-r '></div>
+        <div className="lg:w-2/5 relative shadow-xl min-h-[5em] rounded-t-xl lg:rounded-l-xl overflow-hidden">
+          <div className='absolute h-full w-full bg-gradient-to-b from-black to-black/30 lg:bg-gradient-to-r rounded-t-xl lg:rounded-l-xl'></div>
           <Image 
             src={content.img} 
             alt='' 
@@ -67,7 +67,7 @@ const Modal = ({ isOpen, onClose, content }: ModalProps) => {
         {/* Description */}
         <div className='lg:w-3/5 p-4 lg:p-6 flex flex-col justify-center'>
           <h2 id="modal-title" className="hidden lg:block mt-5 bold-18 lg:bold-32 py-2">{content.name}</h2>
-          <p className="regular-14 font-[400] dark:text-gray-200 my-2 w-full">{content.moreInfo}</p>
+          <p className="regular-14 dark:text-gray-200 my-2 w-full">{content.moreInfo}</p>
 
           {/* Highlights */}
           <div className="">
@@ -92,16 +92,25 @@ const Modal = ({ isOpen, onClose, content }: ModalProps) => {
 
            
           </div>
-          <div className='flexEnd'>
+          <div className='flex items-center gap-3 lg:flexEnd pt-5 border-t'>
+            
           <button 
               onClick={() => toast({
                 title:'Hello user',
                 description:'System under maintenance use contacts instaed'
               })}
-              className=" my-2 w-full lg:w-2/5 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition duration-300 flexCenter regular-14 gap-2 mt-4"
+              className="w-full lg:w-2/6 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition duration-300 flexCenter regular-14 gap-2 mt-4"
             >
               <p>Schedule a date</p>
               <FaCalendar size={15}/>
+            </button>
+
+            <button 
+            onClick={onClose}
+          aria-label="Close modal"
+          className='block lg:hidden  px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition duration-300 flexCenter regular-14 gap-2 mt-4'
+            >
+              close
             </button>
           </div>
           
@@ -113,7 +122,7 @@ const Modal = ({ isOpen, onClose, content }: ModalProps) => {
         <button 
           onClick={onClose}
           aria-label="Close modal"
-          className="absolute top-4 right-4 p-1 rounded-full hover:bg-black/25 dark:hover:bg-white/15 duration-500 transition-all"
+          className="hidden lg:block absolute top-4 right-4 p-1 rounded-full hover:bg-black/25 dark:hover:bg-white/15 duration-500 transition-all"
         >
           <IoMdClose size={20}/>
         </button>
@@ -145,7 +154,7 @@ const Security = () => {
         <div className='lg:w-1/2 flex flex-col'>
         <h1 className='bold-20 my-2'>Security Services</h1>
          <p className="regular-14 lg:text-[15px]">
-         At Simplex Technologies, we specialize in providing comprehensive security solutions to meet the evolving needs of our clients. Explore our specialized security services below
+          We specialize in providing comprehensive security solutions to meet the evolving needs of our clients. Explore our specialized security services below
           </p>
       </div>
 
@@ -159,7 +168,7 @@ const Security = () => {
       </div>
 
       {/* service cards */}
-      <div className='py-10 grid md:grid-cols-2 lg:grid-cols-4 gap-5'>
+      <div className='py-10 lg:py-16 grid md:grid-cols-2 lg:grid-cols-4 gap-5'>
       {securityServices.map((card)=>{
         return <div 
         key={card.name} 
@@ -185,7 +194,7 @@ const Security = () => {
         <button 
             type="button"
             onClick={() => handleLearnMoreClick(card)}
-            className='text-[20px] flex items-center gap-1 hover:gap-2  text-blue-500 absolute float-right m-5 hover:p-5 hover:text-[28px] hover:bg-black hover:text-white rounded-full duration-200 transition-all'
+            className='text-[14px] text-white bg-blue-500 absolute float-end m-5 p-3 hover:p-5 hover:text-[28px] hover:bg-black hover:text-white rounded-full duration-200 transition-all'
           > 
             <FaChevronRight/>
           </button>

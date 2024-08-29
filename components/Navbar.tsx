@@ -24,7 +24,7 @@ const Navbar = () => {
               <Link
                 key={link.key}
                 href={link.href}
-                className='text-[14px] hover:text-blue-500 duration-150 transition-colors'
+                className='text-[14px] p-1 hover:bg-gray-300/30 rounded-lg  duration-150 transition-colors'
               >
                 {link.label}
               </Link>
@@ -33,7 +33,7 @@ const Navbar = () => {
         </div>
 
         <div className='flex gap-2 items-center regular-14'>
-          <a href="" className='text-[14px] p-1 hover:bg-gray-300/30 rounded-lg'>Facebook</a>
+          {/* <a href="" className='text-[14px] p-1 hover:bg-gray-300/30 rounded-lg'>Facebook</a> */}
           <a href="" className='text-[14px] p-1 hover:bg-gray-300/30 rounded-lg'>Whatsapp</a>
         <ThemeToggleButton />
    <button className='lg:hidden' onClick={toggleMenu}>

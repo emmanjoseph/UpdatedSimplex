@@ -1,4 +1,5 @@
 import UserImg from '@/public/user.jpg';
+import Moses from '@/public/moses.jpg'
 import CCTV from '@/public/securityCamera.jpg'
 import LowVoltageCable from '@/public/lowVoltage.jpg'
 import AlarmSysytem from '@/public/alarm.jpg'
@@ -332,7 +333,7 @@ export const NAV_LINKS = [
       id: 1,
       name: "Moses Muia",
       designation: "Manager",
-      image: UserImg.src,
+      image: Moses.src,
     },
     {
       id: 2,
@@ -340,20 +341,15 @@ export const NAV_LINKS = [
       designation: "Technical Support",
       image: UserImg.src,
     },
+   
     {
       id: 3,
-      name: "Jane Smith",
-      designation: "Data Scientist",
-      image: UserImg.src,
-    },
-    {
-      id: 4,
       name: "Lawrence Kinyua",
       designation: "Technical Support",
       image: UserImg.src,
     },
     {
-      id: 5,
+      id: 4,
       name: "Mary Wanjiru",
       designation: "Technical Support",
       image: UserImg.src,

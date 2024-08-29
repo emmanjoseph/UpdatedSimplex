@@ -2,10 +2,22 @@
 import React, { useState } from 'react'
 import dynamic from 'next/dynamic'
 import Top from './Top'
+import { Loader } from '@/components/Loader';
 
-const Communication = dynamic(()=> import('@/app/services/Communication'))
-const Security = dynamic(()=> import('@/app/services/Security'))
-const Electrical = dynamic(()=> import('@/app/services/Electrical'))
+// const Communication = dynamic(()=> import('@/app/services/Communication'))
+// const Security = dynamic(()=> import('@/app/services/Security'))
+// const Electrical = dynamic(()=> import('@/app/services/Electrical'))
+
+const Communication = dynamic(() => import('@/app/services/Communication'), {
+  loading: () => <Loader />,
+});
+const Electrical = dynamic(() => import('@/app/services/Electrical'), {
+  loading: () => <Loader />,
+});
+const Security = dynamic(() => import('@/app/services/Security'), {
+  loading: () => <Loader />,
+});
+
 
 const Medium = () => {
     const [activeService, setActiveService] = useState('service1');

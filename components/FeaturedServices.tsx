@@ -5,6 +5,8 @@ import { MdCable, MdSolarPower } from "react-icons/md";
 import { FaDiagramProject } from "react-icons/fa6";
 import { RiAlarmWarningFill } from "react-icons/ri";
 import { BiSolidCctv } from "react-icons/bi";
+import Link from "next/link";
+import TailwindButton from "./ui/TailwindButton";
 
 export function BentoGridDemo() {
   return (
@@ -27,6 +29,11 @@ export function BentoGridDemo() {
           />
         ))}
       </BentoGrid>
+      <div className="flexCenter my-7">
+      <Link href='/services'>
+      <TailwindButton text="Explore more" className="px-4 py-2"/>
+      </Link>
+      </div>
     </div>
   );
 }

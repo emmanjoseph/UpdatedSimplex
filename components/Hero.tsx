@@ -5,10 +5,13 @@ import { AnimatedTooltip } from './ui/AnimatedTooltip';
 import { people } from '@/app/Constants';
 import Cctv from '@/public/cctv.jpg'
 import Internet from '@/public/internet.jpg'
+import Fence from '@/public/electricfence.jpg'
 import Image from 'next/image';
 import { GlowingStarsBackgroundCard, GlowingStarsDescription, GlowingStarsTitle } from './ui/glowing-stars';
 import { FaArrowRight } from 'react-icons/fa6';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
+
 
 const Hero = () => {
   return (
@@ -16,7 +19,7 @@ const Hero = () => {
     <div className=" w-full dark:bg-black bg-white  dark:bg-grid-white/[0.1] bg-grid-black/[0.1] relative">
       {/* Radial gradient for the container to give a faded look */}
       <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"/>
-      <div className='w-full h-full max-container padding-container flex items-center justify-center  gap-4 py-32'>
+      <div className='w-full h-[80vh] lg:h-full max-container padding-container flex items-center justify-center  gap-4 py-28'>
        <div className='lg:w-1/2 flex flex-col'>
        <div className='flex flex-row items-center justify-start my-4'>
             <AnimatedTooltip items={people} />            
@@ -40,16 +43,25 @@ const Hero = () => {
          </div>       
        </div>
 
-       <div className='w-1/2 h-3/5  hidden lg:grid grid-rows-2 gap-3 z-10'>
-        <div className='border rounded-lg'>
-          <Image src={Cctv} alt='hero1' className='rounded-lg h-[350px] object-cover'/>
+       <motion.div
+       initial={{opacity:0,y:50}}
+       animate={{opacity:1,y:0}}
+       transition={{duration:2,delay:0.2}}
+       className='w-1/2  hidden lg:grid grid-rows-2 gap-3 z-10'>
+        <div className='grid grid-cols-3 gap-3 h-1/2'>
+          <Image src={Fence} alt='hero1' className='rounded-lg h-[350px] object-cover'/>
+          <Image src={Cctv} alt='hero1' className='rounded-lg h-[350px] col-span-2'/>
         </div>
-        <div className='rounded-lg grid grid-cols-2 gap-3'>
+        <div className='rounded-lg grid grid-cols-2 gap-3 h-1/2'>
           <div>
             <Image src={Internet} alt='internet' className='rounded-lg h-full object-cover'/>
           </div>
           <div>
-          <div className="flex items-center justify-center antialiased">
+          <motion.div 
+          initial={{opacity:0,y:50}}
+          animate={{opacity:1,y:0}}
+          transition={{duration:2,delay:0.4}}
+          className="flex items-center justify-center antialiased">
       <GlowingStarsBackgroundCard>
         <GlowingStarsTitle>View more about us</GlowingStarsTitle>
         <div className="flex justify-between items-end">
@@ -61,11 +73,11 @@ const Hero = () => {
           </div>
         </div>
       </GlowingStarsBackgroundCard>
-    </div>
+    </motion.div>
 
           </div>
         </div>
-       </div>
+       </motion.div>
        </div>
     </div>
   );

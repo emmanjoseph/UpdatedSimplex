@@ -57,49 +57,54 @@ const Communication = () => {
 
                 <motion.button
                 
-                className='px-3 py-2 bg-black text-white rounded-full regular-14 dark:bg-white dark:text-black'>{card.price}</motion.button>
+                className='px-3 py-2 bg-black text-white rounded-full regular-14  dark:bg-white dark:text-black dark:hover:text-white hover:text-white hover:bg-blue-500 dark:hover:bg-blue-500 duration-200 transition-all'>{card.price}</motion.button>
 
             </div>
           ))}
         </div>
       </div>
 
-    {/* Corporate Package */}
-<div className='my-7 grid lg:grid-cols-3 gap-16 shadow-lg py-24 px-5 lg:px-10 rounded-xl border dark:border-gray-200/20'>
+   {/* Corporate Package */}
+   <div className='my-7 flex flex-col lg:flex-row gap-16 shadow-lg rounded-xl border dark:border-gray-200/20 relative'>
   {/* Left Column */}
-  <div>
-    <h1 className='bold-20 lg:bold-52 my-2'>Corporate Package</h1>
-    <p className='regular-14 lg:text-[15px] w-full text-justify leading-tight'>
-      Our Corporate Package is designed for businesses that need robust and scalable internet solutions. Consists of internet speeds of above 20 Mbps.
-    </p>
-  </div>
-
-  {/* Middle Column */}
-  <div>
-    <ul className='list-disc list-inside flex flex-col gap-1'>
-      <li className='regular-14 lg:text-[15px]'>Fast syncing with cloud services, ensuring data is backed up and accessible in real-time.
-</li>
-      <li className='regular-14 lg:text-[15px]'> Perfect for remote work, allowing for video conferencing, cloud storage, and simultaneous high-bandwidth activities.
-</li>
-      <li className='regular-14 lg:text-[15px]'>Priority support with 24/7 availability</li>
-      <li className='regular-14 lg:text-[15px]'>Dedicated account manager</li>
-      <li className='regular-14 lg:text-[15px]'>Customizable internet plans</li>
-      <li className='regular-14 lg:text-[15px]'>Advanced security features</li>
-    </ul>
+  <div className='relative w-full lg:w-1/2 h-64 lg:h-auto overflow-hidden rounded-t-xl lg:rounded-l-xl lg:rounded-tr-none'>
+    <Image
+      src={internet}
+      alt='Corporate Package'
+      className='object-cover'
+      layout='fill'
+    />
+    <div className='absolute inset-0 bg-gradient-to-b from-black to-black/30 lg:bg-gradient-to-r'></div>
+    <div className="absolute inset-0 z-10 p-4 lg:p-10 flex flex-col justify-center space-y-4 text-white">
+      <h1 className='bold-20 lg:bold-40'>Corporate Package</h1>
+      <p className='text-sm lg:text-[15px] font-[400] lg:w-7/12'>
+        Empower your business with scalable internet solutions designed to grow with your needs. Stay connected around the clock with our industry-leading 24/7 uptime guarantee.
+      </p>
+    </div>
   </div>
 
   {/* Right Column */}
-  <div className='flexCenter flex-col gap-4'>
-    {/* <Image src='/path/to/image.jpg' alt='Corporate Package' className='object-cover' /> */}
+  <div className='flex flex-col px-4 py-6 lg:py-16 w-full lg:w-1/2'>
+
+  <h1 className='bold-20 py-2'>Features</h1>
+    <ul className='list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300 lg:w-11/12'>
+      <li className='regular-14'>Effortlessly integrate with cloud platforms for smooth, uninterrupted operations.</li>
+      <li className='regular-14'>Experience lightning-fast internet speeds, tailored for high-demand tasks.</li>
+      <li className='regular-14'>Access a dedicated support team ready to assist you anytime, anywhere.</li>
+      <li className='regular-14'>Customize your internet plan to fit your business needs, ensuring maximum efficiency.</li>
+      <li className='regular-14'>Protect your data with our advanced security features, including encrypted connections and real-time threat monitoring.</li>
+      <li className='regular-14'>Connect with global clients and partners seamlessly, ensuring your business is always in touch.</li>
+    </ul>
+
     <motion.button
-      className='px-4 py-2 bg-blue-500 text-white rounded-full regular-14'
-      whileHover={{ scale: 1.05 }}
-      transition={{ duration: 0.3 }}
+      className='lg:w-5/12 mt-7 px-3 py-2 bg-black text-white rounded-full regular-14 dark:bg-white dark:text-black dark:hover:text-white hover:text-white hover:bg-blue-500 dark:hover:bg-blue-500 duration-200 transition-all'
     >
-      Learn More
+      Start Plan
     </motion.button>
   </div>
 </div>
+
+
 
     </motion.div>
   );
