@@ -6,7 +6,9 @@ import { FaDiagramProject } from "react-icons/fa6";
 import { RiAlarmWarningFill } from "react-icons/ri";
 import { BiSolidCctv } from "react-icons/bi";
 import Link from "next/link";
+import Project from '@/public/project.jpg'
 import TailwindButton from "./ui/TailwindButton";
+
 
 export function BentoGridDemo() {
   return (
@@ -23,9 +25,10 @@ export function BentoGridDemo() {
             key={i}
             title={item.title}
             description={item.description}
-            header={item.header}
+            // header={item.header}
             className={i === 3 || i === 6 ? "md:col-span-2" : ""}
             icon={item.icon}
+            image={item.img}
           />
         ))}
       </BentoGrid>
@@ -38,53 +41,50 @@ export function BentoGridDemo() {
   );
 }
 
-const Skeleton = () => (
-  <div className="flex flex-1 w-full h-full min-h-[9rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100"></div>
-);
-
 const items = [
   {
     title: "High Voltage Cabling",
     description: "Delivering reliable and safe high voltage cabling solutions for all your electrical needs.",
-    header: <Skeleton />,
-    icon: <MdCable />
+    icon: <MdCable />,
+    img: "/highvoltage.jpg",  // Use the image path as a string
   },
   {
     title: "Customized Electrical Projects",
     description: "Tailored electrical solutions designed to meet your unique project requirements.",
-    header: <Skeleton />,
-    icon: < FaDiagramProject/>
+    icon: <FaDiagramProject />,
+    img: "/project.jpg",
   },
   {
     title: "Installation of Alarm Systems",
     description: "Secure your premises with our advanced alarm system installations.",
-    header: <Skeleton />,
-    icon: <RiAlarmWarningFill />
+    icon: <RiAlarmWarningFill />,
+    img: "/alarm.jpg",
   },
   {
     title: "Internet Provision",
     description: "Fast and reliable internet solutions for both residential and commercial setups.",
-    header: <Skeleton />,
-    icon: <IoMdWifi />
+    icon: <IoMdWifi />,
+    img: "/internet.jpg",
   },
   {
     title: "Solar Power Installation",
     description: "Harness the power of the sun with our efficient solar power systems.",
-    header: <Skeleton />,
-    icon: <MdSolarPower />
+    icon: <MdSolarPower />,
+    img: "/solar (2).jpg",
   },
   {
     title: "Power Backup Systems",
     description: "Ensure uninterrupted power supply with our robust backup systems.",
-    header: <Skeleton />,
-    icon: <IoIosBatteryFull />
+    icon: <IoIosBatteryFull />,
+    img: "/backup.jpg",
   },
   {
     title: "CCTV Camera Installation",
     description: "Keep an eye on your property with our comprehensive CCTV installation services.",
-    header: <Skeleton />,
-    icon: <BiSolidCctv />
+    icon: <BiSolidCctv />,
+    img: "/cctv2.jpg",
   },
 ];
+
 
 export default BentoGridDemo;

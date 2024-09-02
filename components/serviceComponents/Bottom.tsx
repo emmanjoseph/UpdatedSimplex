@@ -5,6 +5,7 @@ import { AnimatedTooltip } from '../ui/AnimatedTooltip';
 import { people } from '@/app/Constants';
 import TailwindButton from '../ui/TailwindButton';
 import { FaChevronLeft } from 'react-icons/fa';
+import Link from 'next/link';
 
 
 const Bottom = () => {
@@ -33,15 +34,11 @@ const Bottom = () => {
         </div> */}
 
         <div className='flex lg:flex-row flex-col gap-2'>
-          <a href=""><TailwindButton
+          <Link href="/"><TailwindButton
           className='px-3 py-2'
           text='back to homepage'
           icon=<FaChevronLeft/>
-          /></a>
-          <a href=""><TailwindButton
-          className='px-3 py-2'
-          text='scroll to top'
-          /></a>
+          /></Link>
         </div>
         </div>
        

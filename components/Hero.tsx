@@ -3,8 +3,8 @@ import React from 'react';
 import { FlipWords } from './ui/FlipWords';
 import { AnimatedTooltip } from './ui/AnimatedTooltip';
 import { people } from '@/app/Constants';
-import Cctv from '@/public/cctv.jpg'
-import Internet from '@/public/internet.jpg'
+import Commercial from '@/public/commercialBuilding.jpg'
+import Internet from '@/public/router.jpg'
 import Fence from '@/public/electricfence.jpg'
 import Image from 'next/image';
 import { GlowingStarsBackgroundCard, GlowingStarsDescription, GlowingStarsTitle } from './ui/glowing-stars';
@@ -50,7 +50,7 @@ const Hero = () => {
        className='w-1/2  hidden lg:grid grid-rows-2 gap-3 z-10'>
         <div className='grid grid-cols-3 gap-3 h-1/2'>
           <Image src={Fence} alt='hero1' className='rounded-lg h-[350px] object-cover'/>
-          <Image src={Cctv} alt='hero1' className='rounded-lg h-[350px] col-span-2'/>
+          <Image src={Commercial} alt='hero1' className='rounded-lg object-cover h-[350px] col-span-2'/>
         </div>
         <div className='rounded-lg grid grid-cols-2 gap-3 h-1/2'>
           <div>

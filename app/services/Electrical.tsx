@@ -2,7 +2,7 @@
 import { motion } from 'framer-motion'
 import React, { useState } from 'react'
 import electrical from '@/public/electrical.jpg'
-import { electricalServices } from '../Constants'
+import { electricalFAQs, electricalServices } from '../Constants'
 import { FaCheck, FaChevronRight } from 'react-icons/fa'
 import { IoMdClose } from 'react-icons/io'
 import Image, { StaticImageData } from 'next/image';
@@ -27,6 +27,7 @@ interface ModalProps {
 import { useEffect } from 'react';
 import { FaCalendar, FaPhone } from 'react-icons/fa6'
 import { toast } from '@/components/ui/use-toast'
+import Faq from '@/components/serviceComponents/Faq'
 
 const Modal = ({ isOpen, onClose, content }: ModalProps) => {
   
@@ -50,7 +51,7 @@ const Modal = ({ isOpen, onClose, content }: ModalProps) => {
       aria-modal="true"
     >
       <div 
-        className="bg-white dark:bg-[#1a1a1a] rounded-xl max-w-screen-lg w-full lg:h-3/5 relative flex flex-col md:flex-col lg:flex-row gap-3 animate-slideIn"
+        className="bg-white dark:bg-[#1a1a1a] rounded-xl max-w-screen-lg w-full  relative flex flex-col md:flex-col lg:flex-row gap-3 animate-slideIn"
         tabIndex={-1}
       >
 
@@ -60,7 +61,7 @@ const Modal = ({ isOpen, onClose, content }: ModalProps) => {
           <Image 
             src={content.img} 
             alt='' 
-            className='w-full h-[300px] lg:h-full object-cover rounded-t-xl lg:rounded-l-xl'
+            className='w-full h-[250px] lg:h-[500px] object-cover rounded-t-xl lg:rounded-l-xl'
           />
           <div className="absolute top-4 left-4 text-white z-10 flex items-center h-full p-2">
             <h1 className='bold-20 lg:hidden'>{content.name}</h1>
@@ -68,7 +69,7 @@ const Modal = ({ isOpen, onClose, content }: ModalProps) => {
         </div>
 
         {/* Description */}
-        <div className='lg:w-3/5 p-4 lg:p-6 flex flex-col justify-center'>
+        <div className='lg:w-3/5 px-4 lg:px-6 py-6 lg:py-10 flex flex-col justify-center'>
           <h2 id="modal-title" className="hidden lg:block mt-5 bold-18 lg:bold-32 py-2">{content.name}</h2>
           <p className="regular-14 dark:text-gray-200 my-2 w-full lg:w-11/12 text-justify">{content.moreInfo}</p>
 
@@ -98,7 +99,7 @@ const Modal = ({ isOpen, onClose, content }: ModalProps) => {
           <button 
               onClick={() => toast({
                 title:'Hello user',
-                description:'System under maintenance use contacts instaed'
+                description:'System under maintenance use contacts instead'
               })}
               className="w-full lg:w-2/6 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition duration-300 flexCenter regular-14 gap-2 mt-4"
             >
@@ -213,6 +214,7 @@ const Electrical = () => {
         <Modal isOpen={modalOpen} onClose={closeModal} content={modalContent} />
       )}
       
+      <Faq faqs={electricalFAQs}/>
     </motion.div>
   )
 }

@@ -12,8 +12,8 @@ import Link from 'next/link';
 const Footer = () => {
   return (
     <div className='max-container padding-container mt-8 py-10 lg:py-20'>
-      <div className='max-w-full grid md:grid-cols-2 gap-10 pb-28 border-b border-gray-300'>
-        <div className='flex flex-col gap-4'>
+      <div className='max-w-full grid md:grid-cols-3 gap-10 pb-28 border-b border-gray-300'>
+        <div className='col-span-2 flex flex-col gap-4'>
           <div>
             <h1 className='bold-32 md:bold-40'>Simplex</h1>
             <h1 className='bold-32 md:bold-40'>Technologies</h1>
@@ -25,7 +25,7 @@ const Footer = () => {
             </div>
           ))}
         </div>
-        <div className='grid md:grid-cols-3 gap-8'>
+        <div className='grid md:grid-cols-2 gap-8'>
           {FooterLinks.map((column) => (
             <div key={column.key} className='flex flex-col gap-2'>
               <h1 className='bold-18 md:bold-20'>{column.title}</h1>

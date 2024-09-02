@@ -1,8 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import internet from '@/public/internet.jpg';
+import corporate from '@/public/Corporate.jpg';
 import Image from 'next/image';
-import { internetServices } from '../Constants';
+import { InternetfaqData, internetServices } from '../Constants';
 import { AiOutlineUpload } from "react-icons/ai";
 import { IoMdDownload } from "react-icons/io";
 import { LuBadgeCheck } from "react-icons/lu";
@@ -10,6 +11,7 @@ import { MdWifiTethering } from "react-icons/md";
 import { SiTicktick } from "react-icons/si";
 import { MdContactSupport } from "react-icons/md";
 import { IoWallet } from "react-icons/io5";
+import Faq from '@/components/serviceComponents/Faq';
 
 const Communication = () => {
   return (
@@ -69,7 +71,7 @@ const Communication = () => {
   {/* Left Column */}
   <div className='relative w-full lg:w-1/2 h-64 lg:h-auto overflow-hidden rounded-t-xl lg:rounded-l-xl lg:rounded-tr-none'>
     <Image
-      src={internet}
+      src={corporate}
       alt='Corporate Package'
       className='object-cover'
       layout='fill'
@@ -104,6 +106,9 @@ const Communication = () => {
   </div>
 </div>
 
+<div>
+  <Faq faqs={InternetfaqData} />
+</div>
 
 
     </motion.div>

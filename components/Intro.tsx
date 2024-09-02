@@ -20,7 +20,7 @@ const Intro = () => {
 
         <div className='flex flex-col gap-3'>
           <p className='text-justify md:text-center regular-14 md:regular-16 w-full lg:max-w-[650px] my-3 text-black dark:text-gray-200'>
-            We are committed to delivering exceptional IT services that cater to your unique business requirements. 
+            We are committed to delivering exceptional services that cater to your unique business requirements. 
             Our team of professionals is dedicated to providing innovative solutions, ensuring your technology infrastructure 
             is robust, secure, and efficient. Experience unparalleled service quality and reliability with us.
           </p>

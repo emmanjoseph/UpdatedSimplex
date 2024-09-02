@@ -3,11 +3,12 @@ import { motion } from 'framer-motion'
 import React, { useEffect, useState } from 'react'
 import Image, { StaticImageData } from 'next/image'
 import cctv from '@/public/cctv.jpg'
-import { securityServices } from '../Constants'
+import { InternetfaqData, securityFAQs, securityServices } from '../Constants'
 import { FaCalendar, FaCheck, FaChevronRight, FaPhone } from 'react-icons/fa6'
 import { IoMdClose } from 'react-icons/io'
 import { toast } from '@/components/ui/use-toast'
 import { GiSmartphone } from 'react-icons/gi'
+import Faq from '@/components/serviceComponents/Faq'
 
 
 
@@ -47,7 +48,7 @@ const Modal = ({ isOpen, onClose, content }: ModalProps) => {
       aria-modal="true"
     >
       <div 
-        className="bg-white dark:bg-[#1a1a1a] rounded-xl max-w-screen-lg w-full lg:h-3/5 relative flex flex-col md:flex-col lg:flex-row gap-3 animate-slideIn"
+        className="bg-white dark:bg-[#1a1a1a] rounded-xl max-w-screen-lg w-full relative flex flex-col md:flex-col lg:flex-row gap-3 animate-slideIn"
         tabIndex={-1}
       >
 
@@ -57,7 +58,7 @@ const Modal = ({ isOpen, onClose, content }: ModalProps) => {
           <Image 
             src={content.img} 
             alt='' 
-            className='w-full h-[300px] lg:h-full object-cover rounded-t-xl lg:rounded-l-xl'
+            className='w-full h-[250px] lg:h-[500px] object-cover rounded-t-xl lg:rounded-l-xl'
           />
           <div className="absolute top-4 left-4 text-white z-10 flex items-center h-full p-2">
             <h1 className='bold-20 lg:hidden'>{content.name}</h1>
@@ -97,7 +98,7 @@ const Modal = ({ isOpen, onClose, content }: ModalProps) => {
           <button 
               onClick={() => toast({
                 title:'Hello user',
-                description:'System under maintenance use contacts instaed'
+                description:'System under maintenance use contacts instead'
               })}
               className="w-full lg:w-2/6 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition duration-300 flexCenter regular-14 gap-2 mt-4"
             >
@@ -205,6 +206,10 @@ const Security = () => {
       {modalContent && (
         <Modal isOpen={modalOpen} onClose={closeModal} content={modalContent} />
       )}
+
+      <div>
+        <Faq faqs={securityFAQs}/>
+      </div>
     </motion.div>
   )
 }

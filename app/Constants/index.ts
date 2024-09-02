@@ -33,32 +33,12 @@ export const NAV_LINKS = [
     {key:'Quicklinks',title:'QuickLinks',
       links:[
         {
-          link:'',
-          label:'Contact us'
+          link:'/services',
+          label:'Services'
         },
         {
-          link:'',
-          label:'Signup'
-        },
-        {
-          link:'',
+          link:'/about',
           label:'About us'
-        },
-      ]
-    },
-    {key:'Services',title:'Services',
-      links:[
-        {
-          link:'/services',
-          label:'Communication'
-        },
-        {
-          link:'/services',
-          label:'Security'
-        },
-        {
-          link:'/services',
-          label:'Electrical'
         },
       ]
     },
@@ -79,37 +59,39 @@ export const NAV_LINKS = [
       ]
     },
   ]
-  export const testimonials = [
-    {
-      quote:
-        "It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair.",
-      name: "Charles Dickens",
-      title: "A Tale of Two Cities",
-    },
-    {
-      quote:
-        "To be, or not to be, that is the question: Whether 'tis nobler in the mind to suffer The slings and arrows of outrageous fortune, Or to take Arms against a Sea of troubles, And by opposing end them: to die, to sleep.",
-      name: "William Shakespeare",
-      title: "Hamlet",
-    },
-    {
-      quote: "All that we see or seem is but a dream within a dream.",
-      name: "Edgar Allan Poe",
-      title: "A Dream Within a Dream",
-    },
-    {
-      quote:
-        "It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.",
-      name: "Jane Austen",
-      title: "Pride and Prejudice",
-    },
-    {
-      quote:
-        "Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.",
-      name: "Herman Melville",
-      title: "Moby-Dick",
-    },
-  ];
+ export const testimonials = [
+  {
+    quote:
+      "This service exceeded all expectations. The team was professional, prompt, and the results were outstanding. I would highly recommend them to anyone looking for quality work and great customer service.",
+    name: "Jessica Carter",
+    title: "Project Manager, Tech Innovators Inc.",
+  },
+  {
+    quote:
+      "Our experience was nothing short of excellent. From the initial consultation to the final delivery, everything was handled with great care and expertise. We couldn't be happier with the outcome.",
+    name: "Michael Thompson",
+    title: "CEO, Green Energy Solutions",
+  },
+  {
+    quote:
+      "I was impressed with the attention to detail and the level of communication throughout the entire process. They delivered on time and within budget, which is rare these days. Highly recommend!",
+    name: "Emily Rodriguez",
+    title: "Director of Operations, Urban Design Studio",
+  },
+  {
+    quote:
+      "Exceptional service from start to finish. The team was knowledgeable, responsive, and the quality of work was top-notch. We will definitely be using their services again in the future.",
+    name: "David Lee",
+    title: "Founder, Creative Ventures",
+  },
+  {
+    quote:
+      "Working with them was a pleasure. They understood our needs perfectly and executed the project flawlessly. The final product exceeded our expectations, and the whole team was fantastic to work with.",
+    name: "Sophia Martinez",
+    title: "Marketing Lead, Bright Future Inc.",
+  },
+];
+
   export const internetServices = [
     {
       heading: 'Customized Package',
@@ -355,3 +337,81 @@ export const NAV_LINKS = [
       image: UserImg.src,
     },
   ];
+
+  export const InternetfaqData = [
+  { question: 'What internet speed do I need?', answer: 'The internet speed you need depends on your usage. For basic browsing, 20 Mbps is sufficient. For HD streaming, online gaming, and multiple users, 50 Mbps or more is recommended. For Ultra-HD/4K streaming, large file downloads, or business needs, consider speeds of 100 Mbps to 200 Mbps.' },
+  { question: 'Can I upgrade my internet speed if needed?', answer: 'Yes, you can upgrade your internet speed at any time to better suit your needs. We offer flexible plans that can be adjusted as your usage increases.' },
+  { question: 'How many devices can I connect with my internet plan?', answer: 'A 20 Mbps connection can handle up to 3-4 devices simultaneously for basic tasks like browsing and streaming. Higher speeds like 100-200 Mbps can support 10 or more devices, including HD streaming, online gaming, and smart home devices.' },
+  { question: 'What activities require higher internet speeds?', answer: 'Activities like Ultra-HD/4K streaming, online gaming, video conferencing, large file downloads/uploads, and running multiple IoT devices or smart home systems require higher internet speeds (100 Mbps or more).' },
+  { question: 'What affects my internet speed?', answer: 'Several factors can affect your internet speed, including the number of connected devices, the quality of your Wi-Fi router, network congestion, and the type of activities being performed. For the best performance, we recommend using a wired connection for bandwidth-intensive activities.' },
+  { question: 'What is the difference between download and upload speeds?', answer: 'Download speed determines how quickly data is transferred from the internet to your devices (e.g., streaming videos, downloading files). Upload speed refers to how fast you can send data from your devices to the internet (e.g., uploading files, video conferencing). Both are important for a balanced internet experience.' },
+  { question: 'Is there a data cap on my internet plan?', answer: 'Our internet plans are designed to cater to different usage needs, and some plans may include data caps. Please check the specifics of your selected package or contact us to ensure you have the best plan for your usage.' },
+  { question: 'How can I optimize my internet connection for better performance?', answer: 'To optimize your internet connection, ensure your router is placed centrally, away from obstructions. Use a wired connection for activities requiring high bandwidth, and limit the number of devices connected simultaneously. Regularly update your router\'s firmware and consider upgrading to a higher speed plan if necessary.' },
+];
+
+  export const securityFAQs = [
+  {
+    question: "What types of security services do you offer?",
+    answer: "We offer a wide range of security services, including the installation of security cameras, alarm systems, motion detectors, electrical fences, and two-way gate communication systems, among others. Our services are designed to meet both residential and commercial needs."
+  },
+  {
+    question: "How do I choose the right security system for my needs?",
+    answer: "The right security system depends on your specific requirements. For home security, you might consider cameras and motion detectors. For businesses, a more comprehensive system with alarms, electrical fences, and gate communication systems may be more appropriate. We offer consultations to help you make the best choice."
+  },
+  {
+    question: "Can I monitor my security system remotely?",
+    answer: "Yes, our security systems can be integrated with smartphone apps, allowing you to monitor your property remotely in real-time. This includes viewing live camera feeds, receiving alerts, and controlling system settings from anywhere."
+  },
+  {
+    question: "Do you offer maintenance and support for installed systems?",
+    answer: "Absolutely. We provide ongoing maintenance and support for all our installed systems. This includes regular check-ups, troubleshooting, and technical support to ensure your security systems remain fully operational."
+  },
+  {
+    question: "How quickly can my security system be installed?",
+    answer: "Installation times vary depending on the complexity of the system and the size of the property. However, we aim to complete most installations within a few days of your order confirmation."
+  },
+  {
+    question: "Are your security systems customizable?",
+    answer: "Yes, all our security solutions are fully customizable. We can tailor the system to fit your specific needs, whether it's for a small home, large estate, or commercial building."
+  },
+  {
+    question: "What happens if there’s a power outage?",
+    answer: "Our security systems come with backup power options, ensuring that your security remains active even during power outages. This includes battery backups for alarms and security cameras."
+  }
+];
+
+export const electricalFAQs = [
+  {
+    question: "What types of electrical services do you offer?",
+    answer: "We offer a comprehensive range of electrical services, including high voltage cabling solutions, basic home wiring, commercial building wiring, customized electrical projects for learning institutions and corporate research, and more."
+  },
+  {
+    question: "How can I determine which electrical service is right for my needs?",
+    answer: "The right service depends on your specific requirements. For residential needs, basic home wiring might suffice, while commercial projects may require more complex solutions like high voltage cabling. We provide consultations to assess your needs and recommend the best service."
+  },
+  {
+    question: "Do you handle both residential and commercial electrical projects?",
+    answer: "Yes, we handle both residential and commercial electrical projects. Our expertise spans from basic home wiring to large-scale commercial installations and specialized projects for institutions and research facilities."
+  },
+  {
+    question: "How long does it take to complete an electrical project?",
+    answer: "The duration of an electrical project depends on its complexity and scope. Simple residential wiring can often be completed within a day or two, while larger commercial or customized projects may take several weeks. We provide estimated timelines during the consultation phase."
+  },
+  {
+    question: "Are your electrical services customizable?",
+    answer: "Yes, our services are fully customizable. Whether you need a specific solution for your home or a tailored electrical system for a commercial building or institution, we can design and implement a solution that meets your unique needs."
+  },
+  {
+    question: "What safety measures do you take during electrical installations?",
+    answer: "Safety is a top priority. We adhere to all relevant safety codes and standards, use high-quality materials, and ensure that all installations are performed by certified professionals. We also conduct thorough inspections and tests to ensure everything is safe and functional."
+  },
+  {
+    question: "Do you provide maintenance and support for electrical systems?",
+    answer: "Yes, we offer ongoing maintenance and support for all our electrical systems. This includes routine check-ups, troubleshooting, and repairs to ensure that your electrical systems continue to operate efficiently and safely."
+  },
+  {
+    question: "What should I do if I experience an electrical issue after installation?",
+    answer: "If you experience any issues after installation, please contact us immediately. We provide prompt support and will address any problems to ensure your electrical system is functioning correctly."
+  }
+];
+
