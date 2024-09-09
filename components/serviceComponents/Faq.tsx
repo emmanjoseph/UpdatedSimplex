@@ -1,7 +1,7 @@
 'use client'
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, ChevronUp } from 'lucide-react';
 
 interface FaqProps {
   faqs: { question: string; answer: string }[];
@@ -23,7 +23,7 @@ const Faq: React.FC<FaqProps> = ({ faqs }) => {
             key={index}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3, delay: index * 0.1 }}
+            transition={{ duration: 0.3, delay: index * 0.2 }}
             className="bg-white shadow-lg dark:bg-transparent p-4 rounded-md dark:border border-gray-200/20"
           >
             <div 
@@ -31,14 +31,17 @@ const Faq: React.FC<FaqProps> = ({ faqs }) => {
               onClick={() => toggleExpand(index)}
             >
               <p>{faq.question}</p>
-              <button><ChevronDown/></button>
+              <button>
+                {expandedIndex === index ? <ChevronUp /> : <ChevronDown />}
+              </button>
             </div>
             {expandedIndex === index && (
               <motion.p
                 initial={{ height: 0, opacity: 0 }}
                 animate={{ height: 'auto', opacity: 1 }}
                 exit={{ height: 0, opacity: 0 }}
-                className="regular-14 dark:text-gray-400 mt-2"
+                transition={{duration:0.2}}
+                className="regular-14 dark:text-gray-400 mt-2 lg:w-11/12"
               >
                 {faq.answer}
               </motion.p>

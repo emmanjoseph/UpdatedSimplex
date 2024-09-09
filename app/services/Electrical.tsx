@@ -25,7 +25,7 @@ interface ModalProps {
 }
 
 import { useEffect } from 'react';
-import { FaCalendar, FaPhone } from 'react-icons/fa6'
+import { FaCalendar, FaPhone, FaStar } from 'react-icons/fa6'
 import { toast } from '@/components/ui/use-toast'
 import Faq from '@/components/serviceComponents/Faq'
 
@@ -69,50 +69,55 @@ const Modal = ({ isOpen, onClose, content }: ModalProps) => {
         </div>
 
         {/* Description */}
-        <div className='lg:w-3/5 px-4 lg:px-6 py-6 lg:py-10 flex flex-col justify-center'>
-          <h2 id="modal-title" className="hidden lg:block mt-5 bold-18 lg:bold-32 py-2">{content.name}</h2>
-          <p className="regular-14 dark:text-gray-200 my-2 w-full lg:w-11/12 text-justify">{content.moreInfo}</p>
+        <div className='lg:w-3/5 px-4 lg:px-6 py-4  flex flex-col justify-center'>
+        <div className='my-2'>
+        <h2 id="modal-title" className="hidden lg:block mt-5 bold-18 lg:bold-20">{content.name}</h2>
+        <p className="text-sm md:regular-14 dark:text-gray-200 mt-3 lg:w-[95%]">{content.moreInfo}</p>
+        </div>
+         
 
           {/* Highlights */}
-          <div className="">
-            <h3 className="bold-16 py-2">Service Highlights</h3>
+          <div className="my-2">
+            <h3 className="bold-16">Service Highlights</h3>
             <ul className="">
               {content.highlights.map((highlight, id) => (
                 <li key={id} className='flex gap-2 items-center'>
-                  <FaCheck size={10} className='text-blue-500'/><span className="regular-14 font-[400] dark:text-gray-200">{highlight}</span>
+                  <FaCheck size={10} className='text-blue-500'/><span className="text-sm lg:regular-14 font-[400] dark:text-gray-200">{highlight}</span>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Footer or additional actions */}
-          <div className='py-5  border-b dark:border-gray-200'>
-            <h1 className='bold-16'>Contact us</h1>
-            <ul className='flex gap-2 lg:gap-5 text-sm text-black/90 dark:text-gray-200 '>
-              <li className='flex items-center gap-0.5'><GiSmartphone/>0722966576</li>
-              <li className='flex items-center gap-0.5'><GiSmartphone/>0733966576</li>
-              <li className='flex items-center gap-0.5'><GiSmartphone/>0777966576</li>
-            </ul>
+          {/* stars */}
+          <div className='mt-2 gap-2'>
+            <span className='bold-16 py-2'>Overall Rating</span>
+            <div className='flex gap-1 text-yellow-400'>
+              <FaStar size={14}/>
+              <FaStar size={14}/>
+              <FaStar size={14}/>
+              <FaStar size={14}/>
+              <FaStar size={14}/>
+            </div>
           </div>
-          <div className='flex items-center gap-3 lg:flexEnd pt-5 border-t'>
+
+          {/* bottom */}
+          <div className='lg:w-[96%] flex items-center gap-3 lg:flexEnd pt-1'>
             
           <button 
-              onClick={() => toast({
-                title:'Hello user',
-                description:'System under maintenance use contacts instead'
-              })}
-              className="w-full lg:w-2/6 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition duration-300 flexCenter regular-14 gap-2 mt-4"
+              className="w-full lg:w-2/6 px-4 py-3 bg-gray-700 text-white rounded-3xl hover:bg-blue-700 transition duration-300 flexCenter regular-14 gap-2 mt-4"
+            >
+              <p>Contact us</p>
+              {/* <FaPhone size={15}/> */}
+            </button>
+          <button 
+           onClick={() => toast({
+            title:'Hello user',
+            description:'System under maintenance use contacts instead'
+          })}
+              className="w-full px-4 py-3 bg-blue-600 text-white rounded-3xl hover:bg-blue-700 transition duration-300 flexCenter regular-14 gap-2 mt-4"
             >
               <p>Schedule a date</p>
               <FaCalendar size={15}/>
-            </button>
-
-            <button 
-            onClick={onClose}
-          aria-label="Close modal"
-          className='block lg:hidden  px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition duration-300 flexCenter regular-14 gap-2 mt-4'
-            >
-              close
             </button>
           </div>
           
@@ -124,7 +129,7 @@ const Modal = ({ isOpen, onClose, content }: ModalProps) => {
         <button 
           onClick={onClose}
           aria-label="Close modal"
-          className="hidden lg:block absolute top-4 right-4 p-1 rounded-full hover:bg-black/25 dark:hover:bg-white/15 duration-500 transition-all"
+          className="absolute top-4 right-4 p-1 rounded-full bg-red-500 text-white duration-500 transition-all"
         >
           <IoMdClose size={20}/>
         </button>
@@ -190,10 +195,10 @@ const Electrical = () => {
         </div>
       
         {/* Uniform text content */}
-        <div className='w-full flex flex-col justify-between p-5'>
+        <div className='w-full flex flex-col justify-between p-4'>
           <div>
             <h1 className='bold-16'>{card.name}</h1>
-            <p className='regular-14 py-1 line-clamp-3'>{card.description}</p>
+            <p className='text-xs lg:regular-14 py-1 line-clamp-3'>{card.description}</p>
           </div>
       
           
