@@ -40,8 +40,8 @@ const Faq: React.FC<FaqProps> = ({ faqs }) => {
                 initial={{ height: 0, opacity: 0 }}
                 animate={{ height: 'auto', opacity: 1 }}
                 exit={{ height: 0, opacity: 0 }}
-                transition={{duration:0.2}}
-                className="regular-14 dark:text-gray-400 mt-2 lg:w-11/12"
+                transition={{duration:0.3}}
+                className="regular-14 text-gray-700 dark:text-gray-400 mt-2 lg:w-11/12"
               >
                 {faq.answer}
               </motion.p>
