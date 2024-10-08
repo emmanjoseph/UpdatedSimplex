@@ -12,7 +12,7 @@ const Intro = () => {
             initial={{ opacity: 0,y:50 }}
             whileInView={{ opacity: 1,y:0 }}
             transition={{ delay: 0.3, duration: 0.8 }}
-            className='bold-32 md:bold-66 lg:text-center mb-4 '
+            className='bold-32 md:bold-66 md:text-center mb-4 '
           >
             Get The Best <br /> From Us &#128076;
           </motion.h1>

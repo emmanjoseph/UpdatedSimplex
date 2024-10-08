@@ -64,6 +64,10 @@ export function FeaturesSectionDemo() {
 
   return (
     <div className="max-container padding-container py-20 lg:py-28">
+     <h2 className="text-3xl font-bold md:text-center text-neutral-800 dark:text-neutral-100 mb-12">
+  Key Features
+</h2>
+
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 relative z-10 py-10 max-w-full mx-auto">
         {features.map((feature, index) => (
           <Feature key={feature.title} {...feature} index={index} />
@@ -93,7 +97,7 @@ const Feature = ({
       )}
     >
       {index < 4 && (
-        <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-t from-neutral-100 dark:from-neutral-800 to-transparent pointer-events-none" />
+        <div className="opacity-0 group-hover/feature:opacity-100 transition duration-300 ease-in-out absolute inset-0 h-full w-full bg-gradient-to-t from-neutral-100 dark:from-neutral-800 to-transparent pointer-events-none" />
       )}
       {index >= 4 && (
         <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-b from-neutral-100 dark:from-neutral-800 to-transparent pointer-events-none" />

@@ -4,6 +4,8 @@ import Link from "next/link";
 import React from "react";
 import { Carousel, Card } from "@/components/ui/AppleCardsCarousel";
 import { motion } from "framer-motion";
+import { FaAngleRight } from "react-icons/fa";
+import AutoSliderWithDots from "./ui/AnimateSlides";
 
 // Updated DummyContent to accept props for dynamic rendering
 const DummyContent = ({ title, description,Img }:{title:string,description:string,Img:string}) => {
@@ -17,13 +19,30 @@ const DummyContent = ({ title, description,Img }:{title:string,description:strin
         {description}
       </p>
 
-      <div className="flex mt-6">
+      {/* <div className="flex mt-6">
       <button className="bg-black text-white px-5 py-3 rounded-xl">Explore more</button>
-      </div>
+      </div> */}
     
     </div>
   );
 };
+
+
+const slides = [
+  {
+    image: "/Corporate.jpg",
+    text: "Custom electrical project",
+  },
+  {
+    image:"/securityCamera.jpg",
+    text: "Custom security project",
+  },
+  {
+    image: "https://images.unsplash.com/photo-1601462904263-f2fa0c851cb9?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZWxlY3RyaWNpdHl8ZW58MHx8MHx8fDA%3D",
+    text: "Sunset over the Desert",
+  },
+ 
+];
 
 export function FeaturedServices() {
   const cards = data.map((card, index) => (
@@ -38,14 +57,14 @@ export function FeaturedServices() {
         </h2>
         <Carousel items={cards} />
 
-        <div className="mt-5 animate-pulse">
+        {/* <div className="mt-5 animate-pulse">
           <Link
             href="/services"
             className="px-5 py-3 dark:bg-white dark:text-black bg-neutral-900 text-neutral-200 rounded-full animate-bounce"
           >
             <span>Explore more services</span> &#128073;
           </Link>
-        </div>
+        </div> */}
         <div className="pt-24">
           <h1 className="text-xl md:text-5xl font-bold text-neutral-800 dark:text-neutral-200">
             Custom Projects
@@ -57,23 +76,34 @@ export function FeaturedServices() {
             transition={{ delay: 0.3, duration: 0.7}}
             className="flex flex-col md:flex-row gap-5 items-center"
           >
-            <div className="w-full xl:w-3/5">
+            <div className="w-full xl:w-1/2">
             <p className="regular-14 md:text-[15px] font-[400] text-neutral-800 dark:text-neutral-200 py-7 w-full">
               We specialize in delivering tailor-made solutions that address unique challenges. Our team is experienced in handling diverse and complex projects, offering customized services that align perfectly with your needs. Whether you're looking for advanced technology integrations, specialized wiring, or scalable security systems, we design and execute solutions that go beyond the standard offerings. Trust us to bring your vision to life with innovative, reliable, and scalable project implementations.
             </p>
             </div>
 
-            <div className="xl:w-2/5 grid xl:grid-cols-2 gap-5">
-              <Image src='/project.jpg' alt="image" width={100} height={100}
-              className="w-full h-[350px] object-cover rounded-xl"
-              />
-              <Image src='/project.jpg' alt="image" width={100} height={100}
-              className="w-full h-[350px] object-cover rounded-xl"
-              />
+        
+
+            <div className="xl:w-1/2">
+              {/* <Image src='/project.jpg' alt="image" width={100} height={100}
+              className="w-full h-[450px] object-cover rounded-3xl"
+              /> */}
+               <AutoSliderWithDots slides={slides} />
+
+             
             </div>
           </motion.div>
+          <motion.span
+          initial={{opacity:0,y:100}}
+          whileInView={{opacity:1,y:0}}
+          transition={{duration:0.5,delay:0.3}}
+          >
+          <Link href='/services'
+          className="mt-2 flex gap-2 items-center hover:gap-5 hover:underline hover:text-blue-500 duration-300 ease-in-out xl:w-2/12"
+          ><p>Explore more services</p> <FaAngleRight /></Link>
 
-          
+          </motion.span>
+         
         </div>
       </div>
     </div>
@@ -110,10 +140,10 @@ const data = [
   {
     category: "Electrical",
     title: "High Voltage Cabling Solutions",
-    src: "/backup.jpg",
+    src: "https://images.unsplash.com/photo-1601462904263-f2fa0c851cb9?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZWxlY3RyaWNpdHl8ZW58MHx8MHx8fDA%3D",
     content: (
       <DummyContent
-      Img="/backup.jpg"
+      Img="https://images.unsplash.com/photo-1601462904263-f2fa0c851cb9?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZWxlY3RyaWNpdHl8ZW58MHx8MHx8fDA%3D"
         title="High Voltage Expertise"
         description="Our high voltage cabling solutions ensure optimal performance and safety across industries. We follow international safety standards and provide end-to-end services, from planning and design to installation and testing"
       />
@@ -122,10 +152,10 @@ const data = [
   {
     category: "Security",
     title: "Installation of Alarm Systems",
-    src: "/alarm.jpg",
+    src: "https://images.unsplash.com/photo-1533052439013-45751c7b7dc2?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGFsYXJtfGVufDB8fDB8fHww",
     content: (
       <DummyContent
-      Img="/alarm.jpg"
+      Img="https://images.unsplash.com/photo-1533052439013-45751c7b7dc2?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGFsYXJtfGVufDB8fDB8fHww"
         title="Top-Notch Alarm Systems"
         description="We install advanced alarm systems that integrate with security cameras, motion detectors, and communication devices. Our solutions provide real-time alerts for intrusions, fire, and other emergencies, with mobile notifications and remote control options."
       />
