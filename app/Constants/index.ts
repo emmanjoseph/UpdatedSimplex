@@ -30,8 +30,7 @@ export const NAV_LINKS = [
   ]
 
   export const FooterLinks =[
-    {key:'Quicklinks',title:'QuickLinks',
-      links:[
+   
         {
           link:'/services',
           label:'Services'
@@ -40,24 +39,6 @@ export const NAV_LINKS = [
           link:'/about',
           label:'About us'
         },
-      ]
-    },
-    {key:'Tel',title:'Tel :',
-      links:[
-        {
-          link:'',
-          label:'+254 722 966 576'
-        },
-        {
-          link:'',
-          label:'+254 733 966 576'
-        },
-        {
-          link:'',
-          label:'+254 777 966 576'
-        },
-      ]
-    },
   ]
  export const testimonials = [
   {

@@ -5,7 +5,7 @@ import React from "react";
 import { Carousel, Card } from "@/components/ui/AppleCardsCarousel";
 import { motion } from "framer-motion";
 import { FaAngleRight } from "react-icons/fa";
-import AutoSliderWithDots from "./ui/AnimateSlides";
+
 
 // Updated DummyContent to accept props for dynamic rendering
 const DummyContent = ({ title, description,Img }:{title:string,description:string,Img:string}) => {
@@ -31,23 +31,6 @@ const DummyContent = ({ title, description,Img }:{title:string,description:strin
   );
 };
 
-
-const slides = [
-  {
-    image: "/Corporate.jpg",
-    text: "Custom electrical project",
-  },
-  {
-    image:"/securityCamera.jpg",
-    text: "Custom security project",
-  },
-  {
-    image: "https://images.unsplash.com/photo-1601462904263-f2fa0c851cb9?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZWxlY3RyaWNpdHl8ZW58MHx8MHx8fDA%3D",
-    text: "Sunset over the Desert",
-  },
- 
-];
-
 export function FeaturedServices() {
   const cards = data.map((card, index) => (
     <Card key={card.src} card={card} index={index} layout={true} />
@@ -60,7 +43,7 @@ export function FeaturedServices() {
           What we offer
         </h2>
         <Carousel items={cards} />
-        <div className="pt-24">
+        {/* <div className="pt-24">
           <h1 className="text-xl md:text-5xl font-bold text-neutral-800 dark:text-neutral-200">
             Custom Projects
           </h1>
@@ -73,17 +56,13 @@ export function FeaturedServices() {
           >
             <div className="w-full xl:w-3/4">
             <p className="text-15-regular md:text-16-regular font-[400] text-neutral-800 dark:text-neutral-200 py-7 w-full">
-              We specialize in delivering tailor-made solutions that address unique challenges. Our team is experienced in handling diverse and complex projects, offering customized services that align perfectly with your needs. Whether you're looking for advanced technology integrations, specialized wiring, or scalable security systems, we design and execute solutions that go beyond the standard offerings. Trust us to bring your vision to life with innovative, reliable, and scalable project implementations.
+              Our team is experienced in handling diverse and complex projects, offering customized services that align perfectly with your needs. Whether you're looking for advanced technology integrations, specialized wiring, or scalable security systems, we design and execute solutions that go beyond the standard offerings. 
             </p>
             </div>
 
         
 
-            <div className="xl:w-1/4">
-               <AutoSliderWithDots slides={slides} />
-
-             
-            </div>
+          
           </motion.div>
           <motion.span
           initial={{opacity:0,y:100}}
@@ -98,7 +77,7 @@ export function FeaturedServices() {
 
           </motion.span>
          
-        </div>
+        </div> */}
       </div>
     </div>
   );

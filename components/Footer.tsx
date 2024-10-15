@@ -1,53 +1,60 @@
-'use client'
-import React from 'react';
-import { FooterLinks, Locations } from '@/app/Constants';
-import { RiMapPin3Fill } from "react-icons/ri";
-import { AnimatedTooltip } from './ui/AnimatedTooltip';
-import Link from 'next/link';
-
-
-
-
+import { FooterLinks, Locations } from '@/app/Constants'
+import Link from 'next/link'
+import React from 'react'
 
 const Footer = () => {
   return (
-    <div className='max-container padding-container mt-8 py-10 lg:py-20'>
-      <div className='max-w-full grid md:grid-cols-3 gap-10 pb-28 border-b border-gray-300'>
-        <div className='col-span-2 flex flex-col gap-4'>
-          <div>
-            <h1 className='bold-32 md:bold-40'>Simplex</h1>
-            <h1 className='bold-32 md:bold-40'>Technologies</h1>
-          </div>
-          {Locations.map((location) => (
-            <div key={location.key} className='flex gap-2 regular-14 items-center'>
-              <p><RiMapPin3Fill/></p>
-              <p>{location.label}</p>
-            </div>
-          ))}
+    <section
+    className='max-container padding-container  text-neutral-800 dark:text-neutral-200 pt-20'
+    >
+      <div className='grid xl:grid-cols-4 py-24 gap-10 xl:gap-5'>
+        <div className=''>
+          <h1 className='text-36-bold'>Simplex</h1>
+          <h1 className='text-36-bold'>Technologies</h1>
         </div>
-        <div className='grid md:grid-cols-2 gap-8'>
-          {FooterLinks.map((column) => (
-            <div key={column.key} className='flex flex-col gap-2'>
-              <h1 className='bold-18 md:bold-20'>{column.title}</h1>
-              <ul className='list-none'>
-                {column.links.map((link, index) => (
-                  <li key={index}>
-                    <Link href={link.link} className='text-primary regular-14 hover:underline'>
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-      </div>
-      <div className='flex flex-col md:flex-row items-center justify-between mt-10 gap-3'>
-        <p className='regular-14'>Email: info@simplextechnologies@co.ke</p>
-        <p className='regular-14 text-center md:text-left'>Copyright © 2024 Simplex Technologies. All rights reserved</p>
-      </div>
-    </div>
-  );
-};
 
-export default Footer;
+        {/* links */}
+        <div className='flex flex-col'>
+          <h1 className='text-18-bold pb-3'>Quick links</h1>
+          <ul className='flex flex-col gap-2'>
+          {FooterLinks.map((link)=>{
+            return <Link href={link.link}
+            className='text-14-regular hover:font-medium hover:underline duration-150 transition-all'
+            >{link.label}</Link>
+          })}
+          </ul>
+         
+        </div>
+
+        {/* tell */}
+        <div>
+        <h1 className='text-18-bold pb-3'>Call us</h1>
+        <ul className='flex flex-col gap-2 text-14-regular'>
+          <li>0722966576</li>
+          <li>0733966576</li>
+        </ul>
+        </div>
+        {/* locaton */}
+        <div>
+        <h1 className='text-18-bold pb-3'>Main Offices</h1>
+        <ul className='flex flex-col gap-2'>
+          {Locations.map((location)=>{
+            return <span key={location.key} className='text-14-regular'>
+              {location.label}
+            </span>
+          })}
+        </ul>
+        </div>
+        
+      </div>
+
+      <div className='py-14 border-t border-neutral-800/30 dark:border-neutral-200/30 flex flex-col xl:flex-row items-center justify-between gap-9'>
+        <p className='text-15-regular'><span className='text-[15px] leading-[18px] font-bold'>Email :</span> info@simplextechnologies.co.ke</p>
+
+        <p className='text-14-regular text-center md:text-left'>Copyright © 2024 Simplex Technologies. All rights reserved</p>
+      </div>
+    </section>
+  )
+}
+
+export default Footer

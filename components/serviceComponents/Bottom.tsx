@@ -1,54 +1,60 @@
 import React from 'react'
 import { Locations } from '@/app/Constants'
-import { RiMapPin3Fill } from "react-icons/ri";
+
 import { AnimatedTooltip } from '../ui/AnimatedTooltip';
 import { people } from '@/app/Constants';
-import TailwindButton from '../ui/TailwindButton';
-import { FaChevronLeft } from 'react-icons/fa';
+
 import Link from 'next/link';
 
 
 const Bottom = () => {
   return (
-    <div className='max-container padding-container'>
-      <div className='my-10 md:my-20 pb-24 border-b grid lg:grid-cols-2 gap-5 lg:gap-0'>
+    <section
+    className='max-container padding-container  text-neutral-800 dark:text-neutral-200 pt-20'
+    >
+      <div className='grid xl:grid-cols-4 py-24 gap-10 xl:gap-5'>
+        <div className=''>
+          <h1 className='text-36-bold'>Simplex</h1>
+          <h1 className='text-36-bold'>Technologies</h1>
+        </div>
 
-        <div className='flex flex-col gap-4'>
+        {/* tell */}
         <div>
-            <h1 className='bold-32 md:bold-40'>Simplex</h1>
-            <h1 className='bold-32 md:bold-40'>Technologies</h1>
+        <h1 className='text-18-bold pb-3'>Quick Links</h1>
+        <ul className='flex flex-col gap-2 text-14-regular'>
+          <Link href='/' className='hover:font-medium hover:underline duration-150'>Back to homepage</Link>
+          <li className='hover:font-medium hover:underline duration-150'>To top page</li>
+        </ul>
+        </div>
+
+         {/* people */}
+         <div>
+          <h1 className='text-18-bold pb-3'>Our team</h1>
+          <div className='flex flex-row items-center justify-start'>
+            <AnimatedTooltip items={people} />            
           </div>
-
-          {Locations.map((location) => (
-            <div key={location.key} className='flex gap-2 regular-14 items-center'>
-              <p><RiMapPin3Fill/></p>
-              <p>{location.label}</p>
-            </div>
-          ))}
         </div>
-        <div className='flex flex-col lg:items-end gap-7 mt-5 lg:mt-0'>
-        {/* <div className='flex flex-row items-center justify-start mt-5'>
-          <AnimatedTooltip
-          items={people}
-          />
-        </div> */}
-
-        <div className='flex lg:flex-row flex-col gap-2'>
-          <Link href="/"><TailwindButton
-          className='px-3 py-2'
-          text='back to homepage'
-          icon=<FaChevronLeft/>
-          /></Link>
-        </div>
+        {/* locaton */}
+        <div>
+        <h1 className='text-18-bold pb-3'>Main Offices</h1>
+        <ul className='flex flex-col gap-2'>
+          {Locations.map((location)=>{
+            return <span key={location.key} className='text-14-regular'>
+              {location.label}
+            </span>
+          })}
+        </ul>
         </div>
        
         
       </div>
-      <div className='flex flex-col md:flex-row items-center justify-between my-10 gap-3'>
-        <p className='regular-14'>Email: info@simplextechnologies@co.ke</p>
-        <p className='regular-14 text-center md:text-left'>Copyright © 2024 Simplex Technologies. All rights reserved</p>
+
+      <div className='py-14 border-t border-neutral-800/30 dark:border-neutral-200/30 flex flex-col xl:flex-row items-center justify-between gap-9'>
+        <p className='text-15-regular'><span className='text-[15px] leading-[18px] font-bold'>Email :</span> info@simplextechnologies.co.ke</p>
+
+        <p className='text-14-regular text-center md:text-left'>Copyright © 2024 Simplex Technologies. All rights reserved</p>
       </div>
-    </div>
+    </section>
   )
 }
 
