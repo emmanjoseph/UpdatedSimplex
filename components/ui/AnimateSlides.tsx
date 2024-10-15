@@ -50,7 +50,7 @@ const AutoSliderWithDots: React.FC<AutoSliderWithDotsProps> = ({ slides }) => {
               alt={`Slide ${index}`}
               width={100}
               height={100}
-              className="w-[400px] xl:w-[800px] object-cover object-center h-[250px] xl:h-[400px] rounded-2xl"
+              className="w-[300px] xl:w-[800px] object-cover object-center h-[250px] xl:h-[400px] rounded-2xl"
             />
            
           </motion.div>

@@ -17,20 +17,20 @@ const Navbar = () => {
   return (
     <div className='w-full absolute top-0 left-0 z-40 bg-white/55 dark:bg-black/55 backdrop-blur-md'>
       <div className='max-container padding-container py-4 flexBetween'>
-        <div className='flexCenter gap-24'>
-          <h1 className='bold-20'>Simplex</h1>
+
+          <h1 className='text-18-bold'>Simplex</h1>
           <div className='hidden lg:flexCenter gap-5'>
             {NAV_LINKS.map((link) => (
               <Link
                 key={link.key}
                 href={link.href}
-                className='text-[14px] p-1 hover:bg-gray-300/30 rounded-lg  duration-150 transition-colors'
+                className='text-14-medium p-1 hover:bg-gray-300/30 rounded-lg  duration-150 transition-colors'
               >
                 {link.label}
               </Link>
             ))}
           </div>
-        </div>
+       
 
         <div className='flex gap-2 items-center regular-14'>
           {/* <a href="" className='text-[14px] p-1 hover:bg-gray-300/30 rounded-lg'>Facebook</a> */}

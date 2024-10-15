@@ -21,7 +21,7 @@ export function ThemeToggleButton() {
     <div className="relative">
       <button
         onClick={toggleDropdown}
-        className="flex items-center justify-center hover:bg-gray-200 dark:hover:bg-gray-800 rounded-full p-2 relative"
+        className="flex items-center justify-center hover:bg-gray-200/20 duration-300  rounded-full p-2 relative"
       >
         <motion.div
           initial={{ opacity: 1, scale: 1 }}
@@ -51,19 +51,19 @@ export function ThemeToggleButton() {
           >
             <button
               onClick={() => handleThemeChange("light")}
-              className="block w-full px-7 py-2 text-left text-gray-900 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-600 rounded-lg"
+              className="block w-full px-5 py-2 text-left text-gray-900 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-600 rounded-lg text-14-regular"
             >
               Light
             </button>
             <button
               onClick={() => handleThemeChange("dark")}
-              className="block w-full px-7 py-2 text-left text-gray-900 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-600 rounded-lg"
+              className="block w-full px-5 py-2 text-left text-gray-900 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-600 rounded-lg text-14-regular"
             >
               Dark
             </button>
             <button
               onClick={() => handleThemeChange("system")}
-              className="block w-full px-7 py-2 text-left text-gray-900 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-600 rounded-lg"
+              className="block w-full px-5 py-2 text-left text-gray-900 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-600 rounded-lg text-14-regular"
             >
               System
             </button>

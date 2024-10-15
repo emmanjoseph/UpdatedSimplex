@@ -12,17 +12,21 @@ const DummyContent = ({ title, description,Img }:{title:string,description:strin
   return (
     <div className="bg-[#F5F5F7] p-8 md:p-14 rounded-3xl mb-4">
       <Image src={Img} width={500} height={100} alt="image"
-      className="rounded-3xl w-full h-[250px] xl:h-[500px] object-cover"
+      className="rounded-3xl w-full h-[250px] xl:h-[400px] object-cover"
       />
-      <p className="text-neutral-600 text-base md:text-2xl font-sans mt-6">
+      <p className="text-neutral-600  text-16-regular xl:text-18-regular font-sans mt-6">
         <span className="font-bold text-neutral-700">{title}</span>{" "}
         {description}
-      </p>
+      </p>  
 
-      {/* <div className="flex mt-6">
-      <button className="bg-black text-white px-5 py-3 rounded-xl">Explore more</button>
-      </div> */}
-    
+      <div className="mt-7">
+          <Link href='/'
+      className="text-14-regular text-neutral-200 bg-black px-4 py-3 rounded-full "
+      >
+      View more info
+      </Link>
+      </div>
+     
     </div>
   );
 };
@@ -56,15 +60,6 @@ export function FeaturedServices() {
           What we offer
         </h2>
         <Carousel items={cards} />
-
-        {/* <div className="mt-5 animate-pulse">
-          <Link
-            href="/services"
-            className="px-5 py-3 dark:bg-white dark:text-black bg-neutral-900 text-neutral-200 rounded-full animate-bounce"
-          >
-            <span>Explore more services</span> &#128073;
-          </Link>
-        </div> */}
         <div className="pt-24">
           <h1 className="text-xl md:text-5xl font-bold text-neutral-800 dark:text-neutral-200">
             Custom Projects
@@ -76,18 +71,15 @@ export function FeaturedServices() {
             transition={{ delay: 0.3, duration: 0.7}}
             className="flex flex-col md:flex-row gap-5 items-center"
           >
-            <div className="w-full xl:w-1/2">
-            <p className="regular-14 md:text-[15px] font-[400] text-neutral-800 dark:text-neutral-200 py-7 w-full">
+            <div className="w-full xl:w-3/4">
+            <p className="text-15-regular md:text-16-regular font-[400] text-neutral-800 dark:text-neutral-200 py-7 w-full">
               We specialize in delivering tailor-made solutions that address unique challenges. Our team is experienced in handling diverse and complex projects, offering customized services that align perfectly with your needs. Whether you're looking for advanced technology integrations, specialized wiring, or scalable security systems, we design and execute solutions that go beyond the standard offerings. Trust us to bring your vision to life with innovative, reliable, and scalable project implementations.
             </p>
             </div>
 
         
 
-            <div className="xl:w-1/2">
-              {/* <Image src='/project.jpg' alt="image" width={100} height={100}
-              className="w-full h-[450px] object-cover rounded-3xl"
-              /> */}
+            <div className="xl:w-1/4">
                <AutoSliderWithDots slides={slides} />
 
              
@@ -98,9 +90,11 @@ export function FeaturedServices() {
           whileInView={{opacity:1,y:0}}
           transition={{duration:0.5,delay:0.3}}
           >
-          <Link href='/services'
-          className="mt-2 flex gap-2 items-center hover:gap-5 hover:underline hover:text-blue-500 duration-300 ease-in-out xl:w-2/12"
-          ><p>Explore more services</p> <FaAngleRight /></Link>
+          <Link href='/services'>
+            <button className="px-4 py-3 flex items-center gap-2 dark:bg-white dark:text-neutral-800 text-white bg-neutral-800 rounded-full hover:gap-5 duration-300 transition-all">
+               <p className="text-14-medium">Explore more services</p> <FaAngleRight />
+            </button>
+            </Link>
 
           </motion.span>
          

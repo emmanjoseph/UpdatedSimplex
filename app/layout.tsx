@@ -1,11 +1,16 @@
+// 'use client'
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import {Plus_Jakarta_Sans} from "next/font/google";
 import "./globals.css";
+import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import Navbar from "@/components/Navbar";
-import { Toaster } from "@/components/ui/toaster";
 
-const inter = Inter({ subsets: ["latin"] });
+const fontSans = Plus_Jakarta_Sans({
+  subsets:['latin'],
+  weight:['300','400','500','600','700'],
+  variable:'--font-sans'
+});
 
 export const metadata: Metadata = {
   title: "Simplex Technologies",
@@ -18,21 +23,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={inter.className}>
-      <head>
-        {/* Add metadata here if needed */}
-      </head>
-      <body>
+    <html lang="en">
+      <body
+         className={cn('font-sans antialiased ',fontSans.variable)}
+      >
         <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
+        attribute="class"
+        defaultTheme="system"
         >
           <Navbar/>
           {children}
-          <Toaster/>
         </ThemeProvider>
+        
       </body>
     </html>
   );
