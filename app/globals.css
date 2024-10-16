@@ -58,6 +58,9 @@
   .text-36-bold {
     @apply text-[36px] leading-[40px] font-bold;
   }
+  .text-32-bold {
+    @apply text-[32px] leading-[40px] font-bold;
+  }
 
   .text-24-bold {
     @apply text-[24px] leading-[28px] font-bold;

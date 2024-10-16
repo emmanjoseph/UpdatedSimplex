@@ -2,7 +2,7 @@ import UserImg from '@/public/user.jpg';
 import Moses from '@/public/moses.jpg'
 import CCTV from '@/public/securityCamera.jpg'
 import LowVoltageCable from '@/public/lowVoltage.jpg'
-import AlarmSysytem from '@/public/alarm.jpg'
+import AlarmSystem from '@/public/alarm.jpg'
 import TwoWayGate from '@/public/doorBell.jpg'
 import DoorBells from '@/public/doorBell.jpg'
 import Motion from '@/public/doorBell.jpg'
@@ -122,96 +122,103 @@ export const NAV_LINKS = [
 
   export const securityServices = [
     {
+      id: "installation-of-low-voltage-cables",
       name: "Installation of Low Voltage Cables",
       description: "Enhances visibility and security.",
-      img: LowVoltageCable,
+      img: LowVoltageCable, // Ensure this is a valid image import or path
       moreInfo: "We provide installation of low voltage cables to enhance visibility and security in various settings including industrial, commercial, and residential areas. Our services ensure the smooth transmission of signals for security cameras, alarms, and other systems. We also offer structured cabling solutions to streamline and future-proof your security network.",
       highlights: [
         "Industrial, commercial, and residential solutions",
         "Ensuring safety and efficiency",
         "Installation, maintenance, and repair",
         "Structured cabling for future-proofing security networks",
-        "Optimized for signal transmission for security devices"
-      ]
+        "Optimized for signal transmission for security devices",
+      ],
     },
     {
+      id: "installation-of-security-cameras",
       name: "Installation of Security Cameras",
       description: "Helps in monitoring and recording events for future clarification.",
-      img: CCTV,
+      img: CCTV, // Ensure this is a valid image import or path
       moreInfo: "Our security camera installation services provide comprehensive solutions for monitoring and recording events. We offer advanced camera systems with night vision, motion detection, and remote monitoring capabilities. Our installations are tailored for industrial, commercial, and residential environments, ensuring continuous surveillance with minimal downtime.",
       highlights: [
         "Industrial, commercial, and residential solutions",
         "Night vision and motion detection capabilities",
         "Remote monitoring options",
         "Installation, maintenance, and repair",
-        "Continuous surveillance with minimal downtime"
-      ]
+        "Continuous surveillance with minimal downtime",
+      ],
     },
     {
+      id: "installation-of-alarm-systems",
       name: "Installation of Alarm Systems",
       description: "Provides alert mechanisms to enhance safety and security.",
-      img: AlarmSysytem,
+      img: AlarmSystem, // Ensure this is a valid image import or path
       moreInfo: "We install advanced alarm systems that integrate with security cameras, motion detectors, and communication devices. Our solutions provide real-time alerts for intrusions, fire, and other emergencies, with mobile notifications and remote control options. Our services cover industrial, commercial, and residential properties, enhancing safety and response times.",
       highlights: [
         "Industrial, commercial, and residential solutions",
         "Real-time alerts for emergencies",
         "Mobile notifications and remote control",
         "Integration with other security systems",
-        "Installation, maintenance, and repair"
-      ]
+        "Installation, maintenance, and repair",
+      ],
     },
     {
+      id: "installation-of-two-way-gate-communication-systems",
       name: "Installation of Two-Way Gate Communication Systems",
       description: "Facilitates secure communication for gated entries.",
-      img: TwoWayGate,
+      img: TwoWayGate, // Ensure this is a valid image import or path
       moreInfo: "Our two-way gate communication systems allow for secure, real-time communication at entry points. These systems are ideal for gated communities, offices, and industrial facilities, offering audio and video communication features. We ensure seamless integration with security cameras and access control systems for enhanced security.",
       highlights: [
         "Industrial, commercial, and residential solutions",
         "Audio and video communication features",
         "Integration with security cameras and access control",
         "Real-time secure communication",
-        "Installation, maintenance, and repair"
-      ]
+        "Installation, maintenance, and repair",
+      ],
     },
     {
+      id: "installation-of-doorbells",
       name: "Installation of Doorbells",
       description: "Integrates with communication systems for secure access.",
-      img: DoorBells,
+      img: DoorBells, // Ensure this is a valid image import or path
       moreInfo: "We provide installation of smart doorbells that integrate with your existing communication and security systems. Our doorbells offer features like video streaming, motion detection, and mobile alerts, ensuring secure access to your property. Ideal for homes, offices, and industrial sites, our doorbell systems ensure you are always connected and informed.",
       highlights: [
         "Industrial, commercial, and residential solutions",
         "Video streaming and motion detection",
         "Mobile alerts for secure access",
         "Integration with security and communication systems",
-        "Installation, maintenance, and repair"
-      ]
+        "Installation, maintenance, and repair",
+      ],
     },
     {
+      id: "installation-of-motion-detectors",
       name: "Installation of Motion Detectors",
       description: "Detects movement to prevent unauthorized access.",
-      img: Motion,
+      img: Motion, // Ensure this is a valid image import or path
       moreInfo: "Our motion detector installations provide a vital layer of security by detecting unauthorized movement in restricted areas. Our systems can be integrated with alarms, security cameras, and lighting systems to offer automated responses to security breaches. We offer indoor and outdoor solutions tailored to industrial, commercial, and residential environments.",
       highlights: [
         "Industrial, commercial, and residential solutions",
         "Integration with alarms and security systems",
         "Indoor and outdoor motion detection",
         "Automated security responses",
-        "Installation, maintenance, and repair"
-      ]
+        "Installation, maintenance, and repair",
+      ],
     },
     {
+      id: "installation-of-electrical-fences",
       name: "Installation of Electrical Fences",
       description: "Provides a robust perimeter security solution.",
-      img: Fence,
+      img: Fence, // Ensure this is a valid image import or path
       moreInfo: "We install high-quality electrical fences to provide robust perimeter security for industrial, commercial, and residential properties. Our electrical fences act as a strong deterrent to intruders, offering options for integration with alarm systems and remote monitoring. We ensure compliance with safety standards while maximizing the effectiveness of your perimeter security.",
       highlights: [
         "Industrial, commercial, and residential solutions",
         "Strong deterrent for intruders",
         "Integration with alarm and monitoring systems",
         "Compliance with safety standards",
-        "Installation, maintenance, and repair"
-      ]
-    }
+        "Installation, maintenance, and repair",
+      ],
+    },
   ];
   
   export const electricalServices = [

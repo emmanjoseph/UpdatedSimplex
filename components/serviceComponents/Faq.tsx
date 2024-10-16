@@ -15,14 +15,14 @@ const Faq: React.FC<FaqProps> = ({ faqs }) => {
   };
 
   return (
-    <div className="py-8">
-      {/* <h1 className="bold-20 py-2 text-gray-800 dark:text-gray-200">FAQ</h1> */}
+    <div className="py-14">
+      <h1 className="text-18-bold py-2 text-gray-800 dark:text-gray-200">FAQs</h1>
       <div className="grid lg:grid-cols-2 gap-2">
         {faqs.map((faq, index) => (
           <motion.div 
             key={index}
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, delay: index * 0.2 }}
             className="bg-white shadow-lg dark:bg-transparent p-4 rounded-md dark:border border-gray-200/20"
           >
@@ -41,7 +41,7 @@ const Faq: React.FC<FaqProps> = ({ faqs }) => {
                 animate={{ height: 'auto', opacity: 1 }}
                 exit={{ height: 0, opacity: 0 }}
                 transition={{duration:0.3}}
-                className="regular-14 text-gray-700 dark:text-gray-400 mt-2 lg:w-11/12"
+                className="text-14-regular text-neutral-800 dark:text-neutral-200 mt-2 lg:w-11/12"
               >
                 {faq.answer}
               </motion.p>

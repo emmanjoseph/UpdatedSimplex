@@ -4,17 +4,22 @@ import React from 'react'
 import Services from './page'
 import Reviews from '@/components/serviceComponents/Reviews'
 import Bottom from '@/components/serviceComponents/Bottom'
+import TopNav from '@/components/serviceComponents/TopNav'
 
-const layout = () => {
+export default async function RootLayout({ 
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+ 
+
   return (
-    <div>
-        <Top/>
-        <Services/>
-        <Reviews/>
-        <Bottom/>
-     
-    </div>
-  )
+    <main>
+      <Top/>
+      <TopNav/>
+      {children}
+      <Reviews/>
+      <Bottom/>
+    </main>
+  );
 }
-
-export default layout

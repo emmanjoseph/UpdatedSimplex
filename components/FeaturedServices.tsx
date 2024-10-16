@@ -43,41 +43,6 @@ export function FeaturedServices() {
           What we offer
         </h2>
         <Carousel items={cards} />
-        {/* <div className="pt-24">
-          <h1 className="text-xl md:text-5xl font-bold text-neutral-800 dark:text-neutral-200">
-            Custom Projects
-          </h1>
-
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3, duration: 0.7}}
-            className="flex flex-col md:flex-row gap-5 items-center"
-          >
-            <div className="w-full xl:w-3/4">
-            <p className="text-15-regular md:text-16-regular font-[400] text-neutral-800 dark:text-neutral-200 py-7 w-full">
-              Our team is experienced in handling diverse and complex projects, offering customized services that align perfectly with your needs. Whether you're looking for advanced technology integrations, specialized wiring, or scalable security systems, we design and execute solutions that go beyond the standard offerings. 
-            </p>
-            </div>
-
-        
-
-          
-          </motion.div>
-          <motion.span
-          initial={{opacity:0,y:100}}
-          whileInView={{opacity:1,y:0}}
-          transition={{duration:0.5,delay:0.3}}
-          >
-          <Link href='/services'>
-            <button className="px-4 py-3 flex items-center gap-2 dark:bg-white dark:text-neutral-800 text-white bg-neutral-800 rounded-full hover:gap-5 duration-300 transition-all">
-               <p className="text-14-medium">Explore more services</p> <FaAngleRight />
-            </button>
-            </Link>
-
-          </motion.span>
-         
-        </div> */}
       </div>
     </div>
   );
