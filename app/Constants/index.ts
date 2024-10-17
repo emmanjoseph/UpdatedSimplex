@@ -223,6 +223,7 @@ export const NAV_LINKS = [
   
   export const electricalServices = [
     {
+      id:"high-voltage-cabling-solutions",
       name: "High Voltage Cabling Solutions",
       description: "Providing high voltage cabling solutions for various needs.",
       img: highVoltageCablingImg,
@@ -237,6 +238,7 @@ export const NAV_LINKS = [
       ]
     },
     {
+      id: "basic-home-wiring",
       name: "Basic Home Wiring",
       description: "Wiring solutions for residential properties.",
       img: homeWiringImg,
@@ -251,6 +253,7 @@ export const NAV_LINKS = [
       ]
     },
     {
+      id: "commercial-building-wiring",
       name: "Commercial Building Wiring",
       description: "Comprehensive wiring solutions for commercial buildings.",
       img: commercialWiringImg,
@@ -265,6 +268,7 @@ export const NAV_LINKS = [
       ]
     },
     {
+      id: "customized-electrical-projects",
       name: "Customized Electrical Projects",
       description: "Tailored electrical solutions for specific requirements.",
       img: customizedProjectsImg,
@@ -279,6 +283,7 @@ export const NAV_LINKS = [
       ]
     },
     {
+      id: "Electrical-projects-for-learning-institutions",
       name: "Electrical Projects for Learning Institutions",
       description: "Specialized electrical projects for schools and universities.",
       img: learningInstitutionsImg,
@@ -293,6 +298,7 @@ export const NAV_LINKS = [
       ]
     },
     {
+      id: "electrical-projects-for-corporate-research",
       name: "Electrical Projects for Corporate Research",
       description: "Electrical solutions for corporate research facilities.",
       img: corporateResearchImg,
@@ -307,6 +313,7 @@ export const NAV_LINKS = [
       ]
     },
     {
+      id: "power-backup-systems",
       name: "Power Backup Systems",
       description: "Reliable power backup solutions.",
       img: powerBackupImg,
@@ -321,6 +328,7 @@ export const NAV_LINKS = [
       ]
     },
     {
+      id: "solar-power-installation",
       name: "Solar Power Installation",
       description: "Sustainable and efficient solar power solutions.",
       img: solarPowerImg,

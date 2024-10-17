@@ -1,6 +1,6 @@
 'use client';
 import { useParams } from 'next/navigation';
-import { securityServices } from '@/app/Constants';
+import { electricalServices } from '@/app/Constants';
 import { TiTick } from 'react-icons/ti';
 import Link from 'next/link';
 import { FaBook, FaHome, FaWhatsapp } from 'react-icons/fa';
@@ -11,7 +11,7 @@ const MoreInfo = () => {
   const { id } = useParams(); // Get the id from the URL params
 
   // Fetch the service using the string id
-  const service = securityServices.find((service) => service.id === id);
+  const service = electricalServices.find((service) => service.id === id);
 
   // Check if the service exists
   if (!service) {
@@ -55,11 +55,11 @@ const MoreInfo = () => {
 
       </div>
 
-      <div className='mt-5 flex flex-col gap-2 border-t pt-4'>
+      <div className='mt-9 flex flex-col gap-2 border-t dark:border-neutral-200/20 border-neutral-800/20 pt-5'>
         <Link href=''>
         <button disabled className='text-14-medium flex items-center gap-1'><FaBook className='text-yellow-500'/><p>book an appointment</p></button>
         </Link>
-        <Link href='/services/security'>
+        <Link href='/services/electrical'>
         <button className='text-14-medium hover:underline transition-all flex items-center gap-1 '><FaHome size={15} className='text-red-500'/><p>back to main page</p></button>
         </Link>
       </div>

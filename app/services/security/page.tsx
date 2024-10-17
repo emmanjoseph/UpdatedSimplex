@@ -1,21 +1,28 @@
-'use client'
+'use client';
 import React from 'react';
 import Image from 'next/image';
-import { securityServices } from '@/app/Constants'; // Ensure the path is correct
+import { securityFAQs, securityServices } from '@/app/Constants'; // Ensure the path is correct
 import Link from 'next/link';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card,CardFooter, CardHeader } from '@/components/ui/card';
 import {
   Dialog,
   DialogContent,
   DialogDescription,
+  DialogFooter,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog"
-
+import { FaChevronRight } from 'react-icons/fa';
+import Faq from '@/components/serviceComponents/Faq';
 
 const Security = () => {
-  // console.log(securityServices);
+  const reducestring = (words: string, length: number) => {
+    if (words.length > length) {
+      return words.substring(0, length) + '...'; // Truncate string
+    }
+    return words;
+  };
 
   return (
     <section className='max-container padding-container mt-5'>
@@ -40,35 +47,46 @@ const Security = () => {
       {/* Cards */}
       <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-4 items-center mt-6 xl:mt-10 '>
         {securityServices.map((card) => (
-          <Card className="card" key={card.name}>
-            <CardHeader>
-            <h2 className='text-18-bold'>{card.name}</h2>
+          <Card className="shad-card" key={card.name}>
+            <Image 
+              src={card.img} 
+              alt={card.name}
+              width={500} 
+              height={300}
+              className='w-full h-[170px] object-cover rounded-lg'
+            />
+            <CardHeader className='p-3'>
+              <h2 className='text-[16px] font-medium leading-[18px]'>{reducestring(card.name,30)}</h2>
             </CardHeader>
-            <CardContent>
-            <CardDescription>
-            <p className='text-14-regular'>{card.description}</p>
-            </CardDescription>
-            </CardContent>
             <CardFooter>
-            <Dialog>
-  <DialogTrigger>Open</DialogTrigger>
-  <DialogContent>
-    <DialogHeader>
-      <DialogTitle>Are you absolutely sure?</DialogTitle>
-      <DialogDescription>
-        This action cannot be undone. This will permanently delete your account
-        and remove your data from our servers.
-      </DialogDescription>
-    </DialogHeader>
-    <Link href={`/services/security/${card.id}`}>
-              <button>more</button>
-            </Link>
-  </DialogContent>
-</Dialog>
+              <Dialog>
+                <DialogTrigger className='text-14-medium hover:text-blue-500 flexCenter gap-2 hover:gap-3 duration-100 transition-all'><span>Explore service</span><FaChevronRight/></DialogTrigger>
+                <DialogContent className='shad-dialog-content'>
+                  <DialogHeader className='flex flex-row items-center gap-5'>
+                    <Image src={card.img} alt={card.name} className='w-[60px] h-[60px] object-cover rounded-lg'/>
+                    <DialogTitle className='text-18-bold lg:text-24-bold text-left'>{card.name}</DialogTitle>
+                  </DialogHeader>
+                  <DialogDescription className='text-16-regular'>
+                    {card.description}
+                  </DialogDescription>
+                  <DialogFooter className='flex flex-row items-center gap-2 lg:gap-0 '>
+                  
+                  <button disabled className='text-14-medium bg-neutral-800 text-white dark:bg-white dark:text-neutral-900 p-2 rounded-lg'>
+                    book appointment
+                  </button>
+                  <Link href={`/services/security/${card.id}`}>
+                    <button className='text-14-medium bg-blue-500 p-2 rounded-lg text-white'>More info</button>
+                  </Link>
+                  </DialogFooter>
+                 
+                </DialogContent>
+              </Dialog>
             </CardFooter>
           </Card>
         ))}
       </div>
+
+      <Faq faqs={securityFAQs}/>
     </section>
   );
 };
