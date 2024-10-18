@@ -30,7 +30,7 @@ const Electrical = () => {
       <div className="lg:flex gap-4 items-center my-4 bg-gradient-to-r from-emerald-600 to-lime-500 rounded-2xl relative overflow-hidden p-2 lg:p-8">
         <div className="flex flex-col lg:w-1/2 z-10 p-10">
           <p className="text-18-bold text-white">
-            We specialize in providing comprehensive security solutions to meet the evolving needs of our clients. Explore our specialized security services below.
+          Our expertise spans a wide range of electrical projects, from basic home wiring to complex commercial building wiring.
           </p>
         </div>
         <div className="relative w-full lg:w-1/2">

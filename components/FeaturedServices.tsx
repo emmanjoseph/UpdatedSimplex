@@ -8,9 +8,9 @@ import { FaAngleRight } from "react-icons/fa";
 
 
 // Updated DummyContent to accept props for dynamic rendering
-const DummyContent = ({ title, description,Img }:{title:string,description:string,Img:string}) => {
+const DummyContent = ({ title, description,Img,link }:{title:string,description:string,Img:string,link:string}) => {
   return (
-    <div className="bg-[#F5F5F7] p-8 md:p-14 rounded-3xl mb-4">
+    <div className="bg-[#F5F5F7] p-8 md:p-14 rounded-3xl mb-4" id="services">
       <Image src={Img} width={500} height={100} alt="image"
       className="rounded-3xl w-full h-[250px] xl:h-[400px] object-cover"
       />
@@ -20,7 +20,7 @@ const DummyContent = ({ title, description,Img }:{title:string,description:strin
       </p>  
 
       <div className="mt-7">
-          <Link href='/'
+          <Link href={link}
       className="text-14-regular text-neutral-200 bg-black px-4 py-3 rounded-full "
       >
       View more info
@@ -60,6 +60,7 @@ const data = [
       Img="/Corporate.jpg"
         title="Reliable and High-Speed Internet"
         description=" Stable and fast internet connectivity is essential for business growth. We provide services according to consumption and affordability.Empower your business with scalable internet solutions designed to grow with your needs. Stay connected around the clock with our industry-leading 24/7 uptime guarantee."
+        link="/services/security/installation-of-security-cameras"
       />
     ),
   },
@@ -72,6 +73,8 @@ const data = [
       Img="/securityCamera.jpg"
         title="Complete CCTV Security Solutions"
         description='Our security camera installation services provide comprehensive solutions for monitoring and recording events. We offer advanced camera systems with night vision, motion detection, and remote monitoring capabilities.'
+        link="/services/security/installation-of-security-cameras"
+
       />
     ),
   },
@@ -84,6 +87,8 @@ const data = [
       Img="https://images.unsplash.com/photo-1601462904263-f2fa0c851cb9?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZWxlY3RyaWNpdHl8ZW58MHx8MHx8fDA%3D"
         title="High Voltage Expertise"
         description="Our high voltage cabling solutions ensure optimal performance and safety across industries. We follow international safety standards and provide end-to-end services, from planning and design to installation and testing"
+        link="services/electrical/high-voltage-cabling-solutions"
+
       />
     ),
   },
@@ -96,6 +101,8 @@ const data = [
       Img="https://images.unsplash.com/photo-1533052439013-45751c7b7dc2?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGFsYXJtfGVufDB8fDB8fHww"
         title="Top-Notch Alarm Systems"
         description="We install advanced alarm systems that integrate with security cameras, motion detectors, and communication devices. Our solutions provide real-time alerts for intrusions, fire, and other emergencies, with mobile notifications and remote control options."
+        link="services/security/installation-of-alarm-systems"
+
       />
     ),
   },
@@ -108,19 +115,23 @@ const data = [
       Img="/lowVoltage.jpg"
         title="Low Voltage Wiring Services"
         description="We provide installation of low voltage cables to enhance visibility and security in various settings including industrial, commercial, and residential areas. Our services ensure the smooth transmission of signals for security cameras, alarms, and other systems. We also offer structured cabling solutions to streamline and future-proof your security network."
+        link="/services/security/installation-of-low-voltage-cables"
+
       />
     ),
   },
   {
     category: "Electrical",
-    title: "Customized Electrical Projects",
-    src: "https://images.unsplash.com/photo-1602081957921-9137a5d6eaee?q=80&w=2793&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    title: "Power Backup Systems Installation",
+    src: "/backup.jpg",
     content: (
       <DummyContent
-      Img="https://images.unsplash.com/photo-1602081957921-9137a5d6eaee?q=80&w=2793&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        title="Tailored Electrical Projects"
-        description="Our customized electrical projects are tailored to meet the diverse and specific needs of clients across industries. From integrating renewable energy sources to designing smart electrical systems, we use the latest technology and best practices to deliver solutions that are not only functional but also energy-efficient and sustainable."
+        Img="/backup.jpg"
+        title="Power Backup Systems"
+        description="We provide installation of power backup systems that ensure uninterrupted power supply during outages. Whether for residential, commercial, or industrial applications, our solutions integrate renewable energy sources and advanced technologies for sustainable and reliable power backup."
+        link="/services/electrical/power-backup-systems"
       />
     ),
-  },
+},
+
 ];

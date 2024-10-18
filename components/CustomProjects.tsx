@@ -13,7 +13,7 @@ const CustomProjects = () => {
         className=""
       >
         <div className="max-w-xs">
-          <h2 className="text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
+          <h2 className="text-left text-balance text-18-bold md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
            We also do custom projects
           </h2>
           <p className="mt-4 text-left  text-base/6 text-neutral-200 text-16-regular">
@@ -29,7 +29,7 @@ const CustomProjects = () => {
         />
       </WobbleCard>
       <WobbleCard containerClassName="col-span-1 min-h-[300px]">
-        <h2 className="max-w-80  text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
+        <h2 className="max-w-80  text-left text-balance text-18-bold md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
           Delivering quality  no worries 
         </h2>
         <p className="mt-4 max-w-[26rem] text-left text-16-regular text-neutral-200">
@@ -38,7 +38,7 @@ const CustomProjects = () => {
       </WobbleCard>
       <WobbleCard containerClassName="col-span-1 lg:col-span-3 bg-blue-900 min-h-[500px] lg:min-h-[600px] xl:min-h-[300px]">
         <div className="max-w-sm">
-          <h2 className="max-w-sm md:max-w-lg  text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
+          <h2 className="max-w-sm md:max-w-lg  text-left text-balance text-18-bold md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
            Start with us
           </h2>
           <p className="mt-4 max-w-[26rem] text-left text-16-regular text-neutral-200">

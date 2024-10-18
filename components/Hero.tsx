@@ -27,14 +27,14 @@ const Hero = () => {
          <h1 className='bold-40 md:bold-66 leading-tight'>Comprehensive<br />
          <FlipWords words={['Communication','Electrical','Security']}/> <br />
          Solutions</h1>
-         <p className='w-full my-4 text-14-regular xl:text-15-regular   xl:max-w-[680px] leading-snug tracking-normal text-neutral-800 dark:text-neutral-200'>
+         <p className='w-full my-4 text-14-regular xl:text-15-regular   xl:max-w-[550px] leading-snug tracking-normal text-neutral-800 dark:text-neutral-200'>
                We provide top-notch solutions tailored to meet your business needs. 
              From infrastructure management to your security, our expert team ensures 
              your technology operates at its best, driving your success forward.'
          </p>
 
          <div className="mt-9 flex flex-col lg:flex-row">
-          <Link href='./FeaturedServices.tsx'>
+          <Link href='/services'>
           <button className="w-[250px] relative inline-flex h-12  overflow-hidden rounded-lg p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 ">
            <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
            <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-slate-950 px-3 py-1 text-sm font-medium text-white backdrop-blur-3xl">
